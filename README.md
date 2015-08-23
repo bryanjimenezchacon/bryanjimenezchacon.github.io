@@ -2,9 +2,9 @@
 
 Proyecto 1, Bases de Datos I, II Semestre 2015
 
-Prototipo online de la página MatchMe
+Prototipo online de la página MatchMe: Cosis para cada corazon
 
-Integrantes:
+Por:
 
 Bryan Jimenez Chacon
 Moises Alvarez Portuguez
