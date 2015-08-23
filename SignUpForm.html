@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" style=text/css href="SignUpFormCSS.css">
+        <title>MatchMe.com Login</title>
+    </head> 
+    <body>
+        <section id="banner">
+            <div class="head1">
+                <img src="logotipo.png">
+                <p>This is MATCHME.COM</p>
+                <p>SIGN UP</p>
+            </div>
+            <div class="formulario_registo">
+                <form method="post" class="signup" action="ingreso.js">
+                    <fieldset class="textbox">
+                    <label class="username">
+                    <span>Nombre de Usuario</span>
+                    <input id="username" name="username" value="" type="text" autocomplete="on" placeholder="Usuario" required>
+                    </label>
+                    <label class="email">
+                    <span>Email</span>
+                    <input id="email" name="email" value="" type="text" placeholder="Email" required
+                    </label>
+                    <label class="password">
+                    <span>Contrase&ntilde;a</span>
+                    <input id="password" name="password" value="" type="password" placeholder="Contrase&ntilde;a" required>
+                    </label>
+                    <input type="submit" id="go" value="Aceptar">
+                    <input  type="button" id="cancel"value="Cancelar" onClick="window.location.href='PantallaInicio.html'">
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+        
+    </body>
+</html>
+
