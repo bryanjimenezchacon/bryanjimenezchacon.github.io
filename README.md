@@ -6,6 +6,6 @@ Prototipo online de la página MatchMe: Cosis para cada corazon
 
 Por:
 
-Bryan Jimenez Chacon
-Moises Alvarez Portuguez
+Bryan Jimenez Chacon / 
+Moises Alvarez Portuguez / 
 Kenneth Callow Monge
