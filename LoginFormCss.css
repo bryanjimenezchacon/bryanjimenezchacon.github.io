@@ -2,42 +2,57 @@ body{
       background-color: white;
 }
 
+.head2{
+    background-color: black;
+}
+
+.head1{
+    display: inline;
+    direction: ltr;
+    text-align:center;
+    padding: 1em 0;
+}
 #banner {
 		background-color: #666666;
-		background-image: url("https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fimagenesfotos.com%2Fwp-content%2F2012%2F01%2Fpaisajes_preciosos10.jpg&f=1");
+		background-image: url("6840713-pattern-wallpaper.jpg");
 		background-size: cover;
 		background-position: center center;
 		background-repeat: no-repeat;
 		color: #d8d8d8;
-		padding: 14em 0;
+		padding: 10em 0;
 		text-align: center;
 		position: relative;
-	}
+    	}
 
 		#banner:before {
 			content: '';
-			position: absolute;
+			position: relative;
 			left: 0;
 			top: 0;
 			width: 100%;
 			height: 100%;
 			background: rgba(64, 72, 80, 0.25);
+
 		}
 
 		#banner .formulario_registro {
 			position: relative;
 			z-index: 1;
+            font-family: sans-serif;
+            margin-left: 500px;
+            margin-right: 500px;
 		}
-
+        
         #banner .formulario_registro :last-child {
             margin-bottom: 0;
         }
-        
+
         #banner p{
             color: white;
             font-family: sans-serif;
             font-size: 25;
         }
+
 #go{
 color:green;
 }
@@ -46,4 +61,3 @@ color:green;
 color:indianred;
 
 }
-

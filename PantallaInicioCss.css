@@ -6,6 +6,9 @@ head{
     background-color: black;
 }
 
+.head1{
+    background-color: black;
+}
 input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
@@ -162,7 +165,7 @@ input[type="submit"],
 
 #banner {
 		background-color: #666666;
-		background-image: url("https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fimagenesfotos.com%2Fwp-content%2F2012%2F01%2Fpaisajes_preciosos10.jpg&f=1");
+		background-image: url("6840713-pattern-wallpaper.jpg");
 		background-size: cover;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -174,7 +177,7 @@ input[type="submit"],
 
 		#banner:before {
 			content: '';
-			position: absolute;
+			position: relative;
 			left: 0;
 			top: 0;
 			width: 100%;
@@ -183,6 +186,7 @@ input[type="submit"],
 		}
 
 		#banner .inner {
+            top: -70px;
 			position: relative;
 			z-index: 1;
 		}
