@@ -1,5 +1,12 @@
 body{
-      background-color: white;
+     	background-color: #666666;
+		background-image: url("fondo.jpg");
+		background-size: cover;
+		background-repeat:repeat;
+		color: #d8d8d8;
+		//padding: 14em 0;
+		text-align: center;
+		position: relative;
 }
 
 .head2{
@@ -10,9 +17,16 @@ body{
     
     text-align:center;
 }
+
+.textbox{
+	display: inline;
+    direction: ltr;
+    text-align:center;
+    padding: 1em 0;
+	}
 #banner {
-		background-color: #666666;
-		background-image: url("6840713-pattern-wallpaper.jpg");
+
+
 		background-size: cover;
 		background-position: center center;
 		background-repeat: no-repeat;

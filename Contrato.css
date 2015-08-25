@@ -1,11 +1,10 @@
 body{
     background-color: #666666;
-		background-image: url("6840713-pattern-wallpaper.jpg");
-		background-size: cover;
-		background-position: center center;
-		background-repeat: no-repeat;
+		background-image: url("fondo.jpg");
+		background-size:cover;
+		background-repeat:repeat;
 		color: #d8d8d8;
-		padding: 1em 0;
+		//padding: 14em 0;
 		text-align: center;
 		position: relative;
 }
