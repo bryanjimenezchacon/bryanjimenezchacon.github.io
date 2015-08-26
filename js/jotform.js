@@ -8123,11 +8123,14 @@ var JotForm = {
             // Some permission names are different than FB users table
             // So we have to fix them
             switch (d) {
-                case "location":
-                    f = "current_location";
-                    break;
                 case "can_be_anyvalue": // for demoing
                     f = "place correct one here";
+                    break;
+                case "sex":
+                    f = "gender";
+                    break;
+                case "about_me":
+                    f = "bio";
                     break;
                 default:
                     f = d;
@@ -8136,44 +8139,60 @@ var JotForm = {
         });
         // Convert fls array to key value pair for easier and faster matching
         var fields = {};
+        var getPhoto = false;
         $A(fls).each(function (p) {
-            fields[p[0]] = p[1];
+            if (p[0] == "pic_with_logo") {
+                getPhoto = {
+                    fieldID: p[1]
+                };
+            }
+            if (p[0] !== "username") { // username is already deprecated
+                fields[p[0]] = p[1];
+            }
         });
 
-        try {
-            var columns = $H(fields).keys().join(", ");
-            var query = FB.Data.query('SELECT ' + columns + ' FROM user WHERE uid={0}', id);
+        var params = $H(fields).keys().without("pic_with_logo"); // remove photo from params, we'll do a separate call for it
 
-            query.wait(function (rows) {
-                var inp;
-                // 0th row has the query result we'll loop through results
-                // and place existing fields into correct inputs
-                $H(rows[0]).each(function (pair) {
-                    if (( inp = $(fields[pair.key]) )) {
-                        // Some values must be converted to string before putting into fields
+        var callback = function (input, user_id) {
+            JotForm.bringOldFBSubmissionBack(id);
+            var hidden = new Element('input', {type: 'hidden', name: 'fb_user_id'}).setValue(id);
+            var form = JotForm.getForm(input);
+            form.insert({top: hidden});
+        };
+
+        try {
+            FB.api('/' + id, {fields: params}, function (res) {
+                var input;
+                $H(res).each(function (pair) {
+                    if ($(fields[pair.key])) {
+                        input = $(fields[pair.key]);
                         switch (pair.key) {
-                            case "current_location":
-                                inp.value = pair.value.name;
+                            case "location":
+                                input.value = pair.value.name;
                                 break;
                             case "website":
-                                inp.value = pair.value.split(/\s+/).join(", ");
+                                input.value = pair.value.split(/\s+/).join(", ");
                                 break;
                             default:
-                                inp.value = pair.value;
+                                input.value = pair.value;
                         }
                     }
                 });
-
-                JotForm.bringOldFBSubmissionBack(id);
-
-                var hidden = new Element('input', {type: 'hidden', name: 'fb_user_id'}).setValue(id);
-                var form = JotForm.getForm(inp);
-                form.insert({top: hidden});
+                // get profile photo if requested
+                if (getPhoto) {
+                    FB.api('/' + id + '/picture', function (res) {
+                        if (res.data.url && $(getPhoto.fieldID)) {
+                            $(getPhoto.fieldID).value = res.data.url;
+                        }
+                        callback(input, id);
+                    });
+                } else {
+                    callback(input, id);
+                }
             });
         } catch (e) {
             console.error(e);
-        }
-
+        }   
         // Hide label description and display Submit buttons
         // Because user has completed the FB login operation and we have collected the info
         $$('.fb-login-buttons').invoke('show');
