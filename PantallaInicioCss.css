@@ -1,6 +1,6 @@
 body {
 		background-color: #666666;
-		background-image: url("fondo.jpg");
+		background-image: url("images/fondo.jpg");
 		background-size: cover;
 		background-repeat:repeat;
 		color: #d8d8d8;
@@ -176,7 +176,7 @@ input[type="submit"],
 
 #banner {
 		//background-color: #666666;
-		//background-image: url("fondo.jpg");
+		//background-image: url("images/fondo.jpg");
 		//background-size: cover;
 		//background-repeat:repeat;
 		//color: #d8d8d8;

@@ -1,11 +1,13 @@
 Cambio en winks y visto por
 ----> Revertir
+Ya se revirtio.
 
 Cambio en Persona/Se llama/ nombre -> Persona/tiene/ nombre - apellido1 - apellido2 (para ser mas especificos)
 ---> Pichudo
 
 Cambio en ciudad/pais > pais/ciudad (para ir de mayor a menor y discriminar mejor las ciudades del mundo)
 ---> Revertir porque no se sabe cual ciudad
+Ya se revirtio.
 
 cambio en contextura/descripcion -> contextura/tipo (para restringir las posibilidades, gruesa,delgada, etc)
 ---> No tan pichudo

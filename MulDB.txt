@@ -1,0 +1,12 @@
+Multidimensional database:
+-  constructed with the multiple dimensions pre-filled in hyper dimensional “cubes” of data rather than the traditional two dimensional tables of Relational Databases.
+- sophisticated and complex queries, superior performance.
+-  data warehousing projects:  the more the data, and the more complex it is.
+-  based on the combination of data aggregators from various sources: networks, arrays, hierarchies and other data formatting methods.
+-  better flexibility in the definition of dimensions, units and unit relationships.
+-  sales and marketing: applications which involve time series.  large volumes of sale and inventory data -> planning related to logistics and executive decision making.
+-  star schema design? : does not account for sparse data -> wasted space.
+-  idea of a data cube in representing the data dimensions available to users.
+-  implemented as top-down, bottom-up, or arrays.
+-  optimized for use with data warehouses and online analytical processing (OLAP) applications
+-  created using input data from existing relational databases.
