@@ -50,7 +50,7 @@ body{
 		#banner .formulario_registro {
 			position: relative;
 			z-index: 1;
-            font-family: sans-serif;
+            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
             margin-left: 500px;
             margin-right: 500px;
 		}
@@ -61,7 +61,7 @@ body{
 
         #banner p{
             color: white;
-            font-family: sans-serif;
+            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
             font-size: 25;
         }
 

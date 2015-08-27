@@ -1,22 +1,56 @@
 <!DOCTYPE html>
 <html>
-    
-    <head>
-        <title>MatchMe.com</title>
-        <link rel="stylesheet" href="PantallaInicioCss.css"/>
-    </head>
-    <body>
-<header class="head1">
-    <img src="logotipo.png"><img src="LogoOficialTrans.png" alt="" width="102" height="101" align="right"/></header>
-        <section id="banner">
-		  <div class="inner">
-					<h2>This is MatchMe.com</h2>
-                    <p>A free responsive dating site.</p>
-					<ul class="actions">
-						<li><a href="SignUpForm.html" class="button big special">Sign Up</a></li><br>
-						<li><a href="LoginForm.html" class="button big alt">Login</a></li>
-					</ul>
-				</div>
-	</section>
-    </body>
+	
+	<head>
+		<title>MatchMe.com</title>
+		<link rel="stylesheet" href="PantallaInicioCss.css"/>
+	</head>
+	<body>
+	<header class="head1">
+		<img src="logotipo.png" align="left" width=15%><img src="LogoOficialTrans.png" alt="" width="102" height="101" align="right">
+		<form method="post" class="signup" action="ingreso.js">
+			<table class="textbox" >
+			<label class="username">
+				<span>Usuario</span>
+				<input id="username" name="username" value="" type="text" placeholder="Usuario" required >
+			</label>
+			<label class="password">
+				<span>Contrase&ntilde;a</span>
+				<input id="password" name="password" value="" type="password" placeholder="Contrase&ntilde;a" required>
+			</label>
+			<input type="submit" id="go" value="Login" onClick="window.location.href='PantallaUsuarioHtml.html'">
+			</table>
+		</form>
+	</header>
+		<section id="banner">
+			<div class="inner">
+				<h1>Bienvenido a MatchMe.com</h1>
+				<p>Reg&iacute;strese para conocer corazones buscando romance.</p>
+			</div>
+			<div class="formulario_registro">
+			<form method="post" class="signup" action="ingreso.js">
+				<fieldset class="textbox">
+				<label class="username">
+				<span>Usuario</span><br>
+				<input id="username" name="username" value="" type="text" placeholder="Usuario" required ><br>
+				</label>
+				<label class="email">
+				<span>Email</span><br>
+				<input id="email" name="email" value="" type="text" placeholder="Email" required ><br>
+				</label>
+				<label class="password">
+				<span>Contrase&ntilde;a</span><br>
+				<input id="password" name="password" value="" type="password" placeholder="Contrase&ntilde;a" required><br>
+				</label>
+				<label class="retrypassword">
+				<span>Repita su contrase&ntilde;a</span><br>
+				<input id="retry" name="retry" value="" type="password" placeholder="Repetir Contrase&ntilde;a" required><br>
+				</label>
+				<br>
+				<input type="submit" id="go" value="Registrarse" onClick="window.location.href='Formularios/Formulario General/RegistroDatos.html'">
+				</fieldset>
+			</form>
+			</div>
+		</section>
+	</body>
 </html>

@@ -6,6 +6,7 @@ body {
 		color: #d8d8d8;
 		//padding: 14em 0;
 		text-align: center;
+		font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 		position: relative;
 }
 
@@ -15,6 +16,9 @@ head{
 
 .head1{
     background-color: black;
+    display: list-item;
+    text-align:center;
+    padding: 0.7em 0;
 }
 input[type="submit"],
 	input[type="reset"],
@@ -221,3 +225,15 @@ input[type="submit"],
 		#banner .button {
 			min-width: 12em;
 		}
+		#banner .formulario_registro {
+			position: relative;
+			z-index: 1;
+            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            margin-left: 500px;
+            margin-right: 500px;
+		}
+        
+        #banner .formulario_registro :last-child {
+            margin-bottom: 0;
+        }
+

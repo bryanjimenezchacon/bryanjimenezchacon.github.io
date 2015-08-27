@@ -4,7 +4,7 @@ body {
 	padding:0;
 	width:100%;
 	color:#959595;
-	font:normal 12px/1.8em , "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font:normal 12px/1.8em Arial, Helvetica, sans-serif;
 	background:url(images/bg.jpg);
 }
 html {
@@ -28,7 +28,7 @@ h1 {
 	margin:0;
 	padding:20px 0 0 0;
 	color:#636363;
-	font:bold 38px/1.2em , "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font:bold 38px/1.2em Arial, Helvetica, sans-serif;
 	letter-spacing:-2px;
 }
 h1 a, h1 a:hover {
@@ -39,17 +39,17 @@ h1 span {
 	color: crimson;
 }
 .logo p{
-    font: normal 20px/1.2em , "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font: normal 20px/1.2em Arial, Helvetica, sans-serif;
     color: white;
 }
 h1 small {
 	padding:0 10px;
-	font:normal 12px/1.2em , "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font:normal 12px/1.2em Arial, Helvetica, sans-serif;
 	letter-spacing:normal;
 }
 
 h2 {
-	font:normal 24px , "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font:normal 24px Arial, Helvetica, sans-serif;
 	padding:8px 0;
 	margin:0;
 	color:#595959;
@@ -57,7 +57,7 @@ h2 {
 p {
 	margin:8px 0;
 	padding:0 0 8px 0;
-	font:normal 12px/1.8em , "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font:normal 12px/1.8em Arial, Helvetica, sans-serif;
 }
 p.spec {
 }
@@ -122,29 +122,32 @@ a.rm, a.com {
 	width:923px;
 }
 .mainbar {
+    align-content: center;
 	margin:0;
+    padding-left: 10em 0;
 	padding:0;
 	float:right;
 	width:638px;
 }
 .mainbar img {
 	padding:4px;
-	border:1px solid #f2f2f1;
+	border:2px solid #00BFFF;
 	background:#FFF;
 }
 .mainbar img.fl {
 	margin:4px 16px 4px 0;
-	float:left;
+	float:right;
 }
 .mainbar .article {
-	margin:0;
-	padding:10px 0 5px 15px;
+	margin:10;
+	padding:10px 10px 15px 15px;
 }
 .mainbar .article a {
 	color:#78bbe6;
 }
 .mainbar .post-data a {
-	color:#595959;
+	color:black;
+    font-family: cursive;
 }
 .mainbar .spec a {
 	padding:5px 15px;
@@ -168,7 +171,7 @@ a.rm, a.com {
 }
 .sidebar .gadget span.q {
 	text-align:right;
-	font:normal 60px/12px , "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font:normal 60px/12px Arial, Helvetica, sans-serif;
 	color:#d9d9d9;
 }
 ul.sb_menu, ul.ex_menu {
@@ -216,7 +219,7 @@ ul.ex_menu li a:hover {
 }
 .fbg {
 	padding:10px 0;
-	background:url(images/fbg_bg.jpg) repeat-y center;
+	background-color: crimson;
 }
 .fbg_resize {
 	margin:0 auto;
@@ -341,7 +344,7 @@ ol li .send {
 	border:0;
 	background:none;
 	color:#afaeae;
-	font:normal 12px/15px , "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font:normal 12px/15px Arial, Helvetica, sans-serif;
 }
 .search .btn {
 	float:left;
@@ -352,7 +355,7 @@ ol li .send {
 }
 .pagenavi {
 	clear:both;
-	font:normal 11px , "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font:normal 11px Arial, Helvetica, sans-serif;
 	margin:0 auto;
 	text-align:right;
 	padding:20px 15px;
@@ -366,7 +369,7 @@ ol li .send {
 	border:1px solid #d9e3cb;
 }
 .pagenavi a:hover, .pagenavi .current {
-	background:#78bbe6;
+	background-color: crimson;
 	color:#FFF;
 }
 .pagenavi .pages {
@@ -386,5 +389,3 @@ ol li .send {
 	font-size:0;
 	line-height:0;
 }
-
-

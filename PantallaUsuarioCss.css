@@ -53,7 +53,7 @@ body{
             margin-right: 830px;
 			position: relative;
 			z-index: 1;
-            font-family: sans-serif;
+            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 		}
         
         .opciones_perfil :last-child {
