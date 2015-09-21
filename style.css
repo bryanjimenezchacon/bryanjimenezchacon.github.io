@@ -1,20 +1,22 @@
 @charset "utf-8";
 body {
-	margin:0;
-	padding:0;
-	width:100%;
-	color:#959595;
-	font:normal 12px/1.8em , "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	background:url(images/bg.jpg);
+	background-color: #666666;
+	background-image: url("images/fondoW.jpg");
+	background-size: cover;
+	background-repeat:repeat;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+head{
+}
+
+.head1{
+    display: list-item;
+    text-align:center;
+    padding: 0.7em 0;
 }
 html {
 	padding:0;
 	margin:0;
-}
-.main {
-	padding:0;
-	margin:0;
-	background:url(images/main_bg.jpg) repeat-y center;
 }
 .logo {
     background: #fff;
@@ -27,8 +29,6 @@ html {
 h1 {
 	margin:0;
 	padding:20px 0 0 0;
-	color:#636363;
-	font:bold 38px/1.2em , "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	letter-spacing:-2px;
 }
 h1 a, h1 a:hover {
@@ -39,30 +39,26 @@ h1 span {
 	color: crimson;
 }
 .logo p{
-    font: normal 20px/1.2em , "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    color: white;
+    font: normal 20px/1.2em ;
 }
 h1 small {
 	padding:0 10px;
-	font:normal 12px/1.2em , "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font:normal 12px/1.2em ;
 	letter-spacing:normal;
 }
 
 h2 {
-	font:normal 24px , "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	padding:8px 0;
+	font:normal 24px ;
 	margin:0;
-	color:#595959;
 }
 p {
 	margin:8px 0;
 	padding:0 0 8px 0;
-	font:normal 12px/1.8em , "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font:normal 12px/1.8em ;
 }
 p.spec {
 }
 a {
-	color:#97c950;
 	text-decoration:underline;
 }
 a.rm, a.com {
@@ -108,7 +104,7 @@ a.rm, a.com {
 	padding:11px 25px;
 	color:black;
 	text-decoration:none;
-	font-size:13px;
+	font-size:16px;
 	line-height:16px;
 }
 .menu_nav ul li.active a, .menu_nav ul li a:hover {
@@ -141,10 +137,8 @@ a.rm, a.com {
 	padding:10px 0 5px 15px;
 }
 .mainbar .article a {
-	color:#78bbe6;
 }
 .mainbar .post-data a {
-	color:#595959;
 }
 .mainbar .spec a {
 	padding:5px 15px;
@@ -168,13 +162,11 @@ a.rm, a.com {
 }
 .sidebar .gadget span.q {
 	text-align:right;
-	font:normal 60px/12px , "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	color:#d9d9d9;
+	font:normal 60px/12px ;
 }
 ul.sb_menu, ul.ex_menu {
 	margin:0;
 	padding:0;
-	color:#939393;
 	list-style:none;
 }
 ul.sb_menu li, ul.ex_menu li {
@@ -188,7 +180,7 @@ ul.ex_menu li {
 }
 ul.sb_menu li a, ul.ex_menu li a {
 	display:block;
-	color:#959595;
+	color:black;
 	text-decoration:none;
 	padding:5px;
 	margin-left:-15px;
@@ -216,7 +208,6 @@ ul.ex_menu li a:hover {
 }
 .fbg {
 	padding:10px 0;
-	background:url(images/fbg_bg.jpg) repeat-y center;
 }
 .fbg_resize {
 	margin:0 auto;
@@ -229,10 +220,8 @@ ul.ex_menu li a:hover {
 	background-color:#fff;
 }
 .fbg p, .fbg h2 {
-	color:#fbfbfb;
 }
 .fbg a {
-	color:#fbfbfb;
 }
 .fbg .col {
 	margin:0;
@@ -319,13 +308,11 @@ ol li .send {
 	margin:16px 0 0 0;
 }
 .search {
-    background-color: #fff;
-	float:right;
+	float:left;
 	width:250px;
-	padding:25px 0;
 }
 .search span {
-	width:235px;
+	width:490px;
 	display:block;
 	background-color:#FFF;
 	height:29px;
@@ -335,13 +322,13 @@ ol li .send {
 }
 .search input#s {
 	float:left;
-	width:185px;
+	width:440px;
 	padding:7px 0 7px 10px;
 	margin:0;
 	border:0;
 	background:none;
 	color:#afaeae;
-	font:normal 12px/15px , "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font:normal 12px/15px ;
 }
 .search .btn {
 	float:left;
@@ -352,7 +339,7 @@ ol li .send {
 }
 .pagenavi {
 	clear:both;
-	font:normal 11px , "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font:normal 11px ;
 	margin:0 auto;
 	text-align:right;
 	padding:20px 15px;
@@ -361,7 +348,6 @@ ol li .send {
 	margin-left:3px;
 	padding:3px 8px;
 	text-decoration:none;
-	color:#939393;
 	background:#f9fbfc;
 	border:1px solid #d9e3cb;
 }

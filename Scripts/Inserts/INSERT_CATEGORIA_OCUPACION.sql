@@ -1,0 +1,5 @@
+insert into CATEGORIA_OCUPACION
+(CATEGORIA_OCUPACION_ID, NOMBRE)
+values
+('1', 'Salud' )
+;

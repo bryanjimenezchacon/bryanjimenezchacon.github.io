@@ -1,0 +1,3 @@
+DELETE FROM FOTO
+where FOTO_ID = '1'
+;

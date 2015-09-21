@@ -1,0 +1,2 @@
+DELETE FROM OCUPACION
+where OCUPACION_id = '1';

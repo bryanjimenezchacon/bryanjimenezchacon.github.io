@@ -1,0 +1,2 @@
+DELETE FROM BEBEDOR
+where BEBEDOR_id = '1';
