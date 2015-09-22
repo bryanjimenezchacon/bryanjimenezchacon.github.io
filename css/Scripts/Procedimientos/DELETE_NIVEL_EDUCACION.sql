@@ -1,0 +1,5 @@
+create or replace procedure DELETE_NIVEL_EDUCACION( pNIVEL_EDUCACION_ID IN NUMBER) is
+begin
+  delete from NIVEL_EDUCACION
+      where NIVEL_EDUCACION_id = pNIVEL_EDUCACION_ID;
+        end DELETE_NIVEL_EDUCACION;

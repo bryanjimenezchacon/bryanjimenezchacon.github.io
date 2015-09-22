@@ -5,7 +5,7 @@
    		<link rel="icon" type="image/gif" href="images\animated_favicon1.gif" >
 <title>MatchMe.com - Agregar Admin</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link href="AgregarAdminCss.css" rel="stylesheet" type="text/css" />
+<link href="style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript" src="js/cufon-yui.js"></script>
@@ -25,18 +25,21 @@
           <li ><a href="PantallaAdmin.html">Inicio</a></li>
           <li class="active"><a href="AgregarAdmin.html">Agregar Administrador</a></li>
           <li><a href="CrearEvento.html">Crear Evento</a></li>
+        <li><a href="ModificarFormularios.html">Modificar Formulario</a></li>
           <li><a href="index.html">Salir</a></li>
         </ul>
         <div class="clr"></div>
       </div>
       
     </div>  
-        <div class="sidebar">
-            <div class="formulario_registro">
+            <div class="mainbar">
+          <div class="article">
+            <h2><span>Agregar Administrador</span></h2><br>
+            <div class="clr"></div>
                 <form method="post" class="signup" action="ingreso.js">
                     <fieldset class="textbox">
                     <label class="username">
-                    <span>Nombre Completo</span><br>
+                    <span>Nombre de usuario</span><br>
                     <input id="username" name="username" value="" type="text" placeholder="Usuario" required ><br>
                     </label>
                     <br>
@@ -58,7 +61,11 @@
                     <input  type="button" id="cancel"value="Cancelar" onClick="window.location.href='PantallaInicio.html'">
                     </fieldset>
                 </form>
-            </div>
+          </div>
+        </div>
+ 
+        <div class="sidebar">
+            
             <div class="gadget">
             <h2 class="star"><span>Mi Informacion</span></h2>
             <div class="clr"></div>

@@ -464,7 +464,29 @@
   background: #c80c0c;
   box-shadow: none;
   text-shadow: none;
-}
+  }
+.boton-cancelar {
+  color: #232323 !important;
+  background:#FFB676;
+  box-shadow: none;
+  text-shadow: none;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  font-size: 1.15em;
+  padding: 12px 18px;
+  display: block;
+  
+  margin: 0;
+  font-family: "Lobster", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  margin:0px;    
+  overflow:visible;
+  padding:1px 6px;
+  width: 100%;
+	}
+
 .form-all .form-pagebreak-back,
 .form-all .form-pagebreak-next {
   font-size: 1em;
@@ -894,13 +916,13 @@ li[data-type="control_image"] img {
       <li class="form-line" data-type="control_textbox" id="id_44">
         <label class="form-label form-label-left form-label-auto" id="label_44" for="input_44"> Edad </label>
         <div id="cid_44" class="form-input jf-required">
-          <input type="text" readonly="readonly" tabindex=-1 class="form-readonly  form-textbox" data-type="input-textbox" id="input_44" name="q44_edad" size="20" value="" />
+          <input type="text" readonly tabindex=-1 class="form-readonly  form-textbox" data-type="input-textbox" id="input_44" name="q44_edad" size="20" value="" />
         </div>
       </li>
       <li class="form-line" data-type="control_textbox" id="id_45">
         <label class="form-label form-label-left form-label-auto" id="label_45" for="input_45"> Signo Zodiacal </label>
         <div id="cid_45" class="form-input jf-required">
-          <input type="text" readonly="readonly" tabindex=-1 class="form-readonly  form-textbox" data-type="input-textbox" id="input_45" name="q45_signoZodiacal45" size="20" value="" />
+          <input type="text" readonly tabindex=-1 class="form-readonly  form-textbox" data-type="input-textbox" id="input_45" name="q45_signoZodiacal45" size="20" value="" />
         </div>
       </li>
       <li class="form-line jf-required" data-type="control_checkbox" id="id_26">
@@ -1100,7 +1122,16 @@ li[data-type="control_image"] img {
             </button>
           </div>
         </div>
+                
       </li>
+      <div id="cid_33" class="form-input-wide">
+          <div style="margin-left: 156px; text-align: center;" class="form-buttons-wrapper">
+
+            <button id="input_33" type="submit" class="boton-cancelar" onClick="window.location.href='../../index.html'">
+              Cancelar
+            </button>
+   </div>
+      </div>
       <li class="form-line" data-type="control_image" id="id_15">
         <div id="cid_15" class="form-input-wide">
           <div style="text-align:right;">
@@ -1109,7 +1140,7 @@ li[data-type="control_image"] img {
         </div>
       </li>
       <li style="display:none">
-        Should be Empty:
+        Debería estar vacío:
         <input type="text" name="website" value="" />
       </li>
     </ul>

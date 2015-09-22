@@ -191,7 +191,7 @@ var JotForm = {
         $$('.form-textbox, .form-textarea, .form-radio, .form-checkbox, .form-dropdown > option').each(function(field){
 
             if(JotForm.isVisible(field)) {
-    
+
                 var fieldType = field.up('li').readAttribute('data-type');
 
                 if (ignoredFields.indexOf(fieldType) !== -1) {
@@ -214,7 +214,7 @@ var JotForm = {
                     var form = $$('.jotform-form')[0];
                     form.insert(new Element('input', {type: 'hidden', name: field.name}).putValue(encryptedAnswer));
                     return;
-                } 
+                }
                 field.value = encryptedAnswer;
             }
         });
@@ -394,6 +394,7 @@ var JotForm = {
                 this.setFocusEvents();
                 this.disableAcceptonChrome();
                 this.handleScreenshot();
+                this.handleChinaCensorship();
 
                 $A(document.forms).each(function (form) {
                     if (form.name == "form_" + form.id || form.name == "q_form_" + form.id) {
@@ -1276,36 +1277,87 @@ var JotForm = {
      * Populate hidden field with user's browser info
      */
     populateBrowserInfo: function (id) {
-        var OS = "Unknown OS";
-        if (navigator.appVersion.indexOf("iPhone") != -1) OS = "iOS iPhone";
-        else if (navigator.appVersion.indexOf("iPad") != -1) OS = "iOS iPad";
-        else if (navigator.appVersion.indexOf("Android") != -1) OS = "Android";
-        else if (navigator.appVersion.indexOf("Win") != -1) OS = "Windows";
-        else if (navigator.appVersion.indexOf("Mac") != -1) OS = "MacOS";
-        else if (navigator.appVersion.indexOf("Linux") != -1) OS = "Linux";
+        var userAgent = 'navigator' in window && 'userAgent' in navigator && navigator.userAgent.toLowerCase() || '';
+        var vendor = 'navigator' in window && 'vendor' in navigator && navigator.vendor.toLowerCase() || '';
+        var appVersion = 'navigator' in window && 'appVersion' in navigator && navigator.appVersion.toLowerCase() || '';
+        var is = {
+            chrome: function(){return /chrome|chromium/i.test(userAgent) && /google inc/.test(vendor)},
+            firefox: function(){return /firefox/i.test(userAgent)},
+            ie: function(){return /msie/i.test(userAgent) || "ActiveXObject" in window || /edge\//i.test(userAgent)},
+            safari: function(){return /safari/i.test(userAgent) && /apple computer/i.test(vendor)},
+            operabrowser: function(){return userAgent.indexOf("Opera") > -1},
+            iphone: function(){return /iphone/i.test(userAgent) || /iphone/i.test(appVersion)},
+            ipad: function(){return /ipad/i.test(userAgent) || /ipad/i.test(appVersion)},
+            ios: function(){return is.iphone() || is.ipad()},
+            android: function(){return /android/i.test(userAgent)},
+            androidPhone: function(){return is.android() && /mobile/i.test(userAgent)},
+            androidTablet: function(){return is.android() && !is.androidPhone()},
+            blackberry: function(){return /blackberry/i.test(userAgent) || /BB10/i.test(userAgent)},
+            linux: function(){return /linux/i.test(appVersion)},
+            mac: function(){return /mac/i.test(appVersion)},
+            windows: function(){return /win/i.test(appVersion)},
+            windowsPhone: function(){return is.windows() && /phone/i.test(userAgent)},
+            windowsTablet: function(){return is.windows() && !is.windowsPhone() && /touch/i.test(userAgent)},
+            mobile: function(){return is.iphone() || is.androidPhone() || is.blackberry() || is.windowsPhone();},
+            tablet: function(){return is.ipad() || is.androidTablet() || is.windowsTablet()},
+            desktop: function(){return !is.mobile() && !is.tablet()}
+        };
 
-        var browser = "Unknown Browser";
-        if (navigator.userAgent.indexOf("MSIE") != -1) browser = "Internet Explorer";
-        else if (navigator.userAgent.indexOf("Firefox") != -1) browser = "Firefox";
-        else if (navigator.userAgent.indexOf("Chrome") != -1) browser = "Chrome";
-        else if (navigator.userAgent.indexOf("Safari") != -1) browser = "Safari";
-        else if (navigator.userAgent.indexOf("Opera") != -1) browser = "Opera";
+        function OS() {
+            if (is.android()) return "Android";
+            else if (is.windows()) return "Windows";
+            else if (is.blackberry()) return "Blackberry";
+            else if (is.linux()) return "Linux";
+            else if (is.ios()) return "iOS";
+            else if (is.mac() && !is.ios()) return "MacOS";
+            return "Unknown OS";
+        }
+
+        function device() {
+            if (is.mobile()) {
+                // separate ios detection because the new windows phone user agent now includes ios
+                // http://www.neowin.net/news/ie11-fakes-user-agent-to-fool-gmail-in-windows-phone-81-gdr1-update
+                if (is.windowsPhone() || is.androidPhone() || is.blackberry()) return "Mobile";
+                else if (is.ios()) return "iPhone";
+            }
+            else if (is.tablet()) {
+                // same above
+                if (is.windowsTablet() || is.androidTablet()) return "Tablet";
+                else if (is.ios()) return "iPad";
+            }
+            else if (is.desktop()) return "Desktop";
+            return "Unknown Device";
+        }
+
+        function browser() {
+            if (is.ie()) return "Internet Explorer";
+            else if (is.firefox()) return "Firefox";
+            else if (is.chrome()) return "Chrome";
+            else if (is.safari()) return "Safari";
+            else if (is.operabrowser()) return "Opera";
+            return "Unknown Browser";
+        }
 
         var offset = new Date().getTimezoneOffset();
         var sign = (offset < 0) ? "+" : "";
         var timeZone = 'GMT ' + sign + -(offset / 60);
-
         var lang = navigator.language || navigator.browserLanguage || navigator.userLanguage;
+        var val = [
+            'BROWSER: ' + browser(),
+            'OS: ' + OS(),
+            'DEVICE: ' + device(),
+            'LANGUAGE: ' + lang,
+            'RESOLUTION: ' + screen.width + "*" + screen.height,
+            'TIMEZONE: ' + timeZone,
+            'USER AGENT: ' + navigator.userAgent
+        ].join('\n');
 
-        var val = 'BROWSER: ' + browser + "\n";
-        val += 'OS: ' + OS + "\n";
-        val += 'LANGUAGE: ' + lang + "\n";
-        val += 'RESOLUTION: ' + screen.width + "*" + screen.height + "\n";
-        val += 'TIMEZONE: ' + timeZone + "\n";
-        val += 'USER AGENT: ' + navigator.userAgent + "\n";
-        if ($(id).value.length > 0)
-            $(id).value += "\n";
-        $(id).value += val;
+        setTimeout(function(){
+            if ($(id).getValue().length > 0) {
+                val = [$(id).getValue(), val].join('\n');
+            }
+            $(id).setValue(val);
+        }, 20);
     },
 
     /**
@@ -1462,11 +1514,12 @@ var JotForm = {
                             day: _sorter.indexOf(_dIn)
                         }
 
-                        var _tempDate = new Date();
-                        _tempDate.setDate(parseInt(lite_mode.value.split(seperator)[_sortIndex.day]));
-                        _tempDate.setMonth(parseInt(lite_mode.value.split(seperator)[_sortIndex.month]) - 1);
-                        _tempDate.setYear(parseInt(lite_mode.value.split(seperator)[_sortIndex.year]));
-                        if (!_tempDate.getDate()) {
+                        var year = parseInt(lite_mode.value.split(seperator)[_sortIndex.year]);
+                        var month = parseInt(lite_mode.value.split(seperator)[_sortIndex.month])-1;
+                        var day = parseInt(lite_mode.value.split(seperator)[_sortIndex.day]);
+                        var _tempDate = new Date(year, month, day);
+
+                        if (!_tempDate || !_tempDate.getDate()) {
                             _tempDate = new Date();
                         }
                         else {
@@ -2130,7 +2183,7 @@ var JotForm = {
                         option.selected = true;
                     }
                 });
-            } else if (input) {    
+            } else if (input) {
                 input.value = pair.value.replace(/\+/g, ' ');
                 JotForm.defaultValues[input.id] = input.value;
             }
@@ -2439,9 +2492,9 @@ var JotForm = {
         }
     },
 
-    clearField: function (field) {
+    clearField: function (field, subfield, dontTrigger) {
 
-        var type = JotForm.getInputType(field);
+        var type = JotForm.calculationType(field);
 
         if (!type) return;
 
@@ -2455,7 +2508,12 @@ var JotForm = {
             return;
         }
 
-        if (["address", "combined", "datetime", "time"].include(type)) {
+        if(type === "matrix" && subfield && $(subfield)) {
+            $(subfield).value = "";
+            if(!dontTrigger && $(subfield).triggerEvent) { 
+                $(subfield).triggerEvent('keyup');
+            }
+        } else if (["address", "combined", "datetime", "time", "matrix"].include(type)) {
             $('id_' + field).select('input').each(function (el) {
                 el.value = (el.id in JotForm.defaultValues) ? JotForm.defaultValues[el.id] : "";
             });
@@ -2874,7 +2932,7 @@ var JotForm = {
                                     throw $break;
                                 }
                             });
-                        
+
                             if (term.operator == 'equalCountry') {
                                 if (option.selected) {
                                     any = true;
@@ -3312,16 +3370,21 @@ var JotForm = {
                 //check if any other conditions are true for this result field
 
                 setTimeout(function (calc) {
-                    var matchForThisResult = false;
+                    var matchForThisResult = {};
+                    var subfield;
                     for (var i = 0; i < calcs.length; i++) {
                         if ((condition.action[0].resultField == calcs[i].resultField && calcs[i].hasOwnProperty('conditionTrue') && calcs[i].conditionTrue)
                             && !(JotForm.getInputType(condition.action[0].resultField) === "html" && condition.action[0].replaceText !== calcs[i].replaceText)) {
-                            matchForThisResult = true;
+                            subfield = calcs[i].resultSubField || "";
+                            matchForThisResult[calcs[i].resultField+subfield] = true;
                         }
                     }
-                    if (!matchForThisResult) {
+                    
+                    subfield = "resultSubField" in condition.action[0] ? condition.action[0].resultSubField : "";
+                    if (!matchForThisResult[condition.action[0].resultField+subfield]) {
                         try {
-                            JotForm.clearField(condition.action[0].resultField);
+                            var dontTrigger = condition.action[0].operands && condition.action[0].operands.split(',').include(condition.action[0].resultField);
+                            JotForm.clearField(condition.action[0].resultField, subfield, dontTrigger);
                         } catch (e) {
                             console.log(e);
                         }
@@ -3457,7 +3520,7 @@ var JotForm = {
 
     enableDisableField: function(qid, enable) {
         if (!$('id_' + qid)) return;
-        
+
         try {
             $('id_' + qid).select("input, textarea, select, button").each(function(input) {
                 if(enable) {
@@ -3726,7 +3789,11 @@ var JotForm = {
                             var option = $('input_' + data).options[ind];
                             if (option && option.selected) {
                                 var current = option.readAttribute('calcValue') ? option.readAttribute('calcValue') : option.value;
-                                val += numeric ? parseInt(current) : current;
+                                if(numeric) {
+                                    val += (current === "") ? 0 : parseFloat(current.replace(/[^0-9.]/g, ""));
+                                } else {
+                                    val +=  current;
+                                }
                             }
                         });
                     } else {
@@ -3966,7 +4033,7 @@ var JotForm = {
                 if(useCommasForDecimals) {
                     if(/\..*\,/.test(val)) { //dot used as units separator before comma
                         val = val.replace(/\./g, "");
-                    } 
+                    }
                     val = val.replace(",",".");
                 }
                 val = val.replace(/-?([^0-9])/g, "$1").replace(/[^0-9\.-]/g, "");
@@ -4605,7 +4672,10 @@ var JotForm = {
                         $A(conds).each(function (cond) {
                             JotForm.checkCondition(cond);
                         });
-                    }).run(event);
+                    });
+                    if (!$(field).id.match(/input_[0-9]+_quantity_[0-9]+_[0-9]+/)) { // b#652068 (do not auto-run condition events on quantity fields)
+                        $(field).run(event);
+                    }
                 }
             });
         } catch (e) {
@@ -4855,6 +4925,9 @@ var JotForm = {
         var productPage = false;            // page where the payment field is
 
         $$('.form-product-has-subproducts').each(function (sp) {
+
+            var wasHidden = (sp.up(".form-line") && sp.up(".form-line").hasClassName("form-field-hidden")) ? sp.up(".form-line").show() : false;
+
             // if this form has page breaks,
             if (sections.length > 1) {
                 // get the page where the payment field is
@@ -4880,6 +4953,10 @@ var JotForm = {
             sp.observe('click', function () {
                 showSubProducts(this);
             });
+
+            if(wasHidden) {
+                sp.up(".form-line").hide();
+            }
         });
 
         function showSubProducts(el) {
@@ -5097,7 +5174,10 @@ var JotForm = {
                         // if native stripe coupon is used and there is a setup fee
                         if (isSetupFee) {
                             var setupFee = price - recur;
-                            price = recur = recur - ( ( discount[1] === 'fixed' ) ? discount[0] : recur * ( discount[0] / 100 ) );
+                            price = recur - ( ( discount[1] === 'fixed' ) ? discount[0] : recur * ( discount[0] / 100 ) );
+                            if (!discount[3]) { // if this isn't just a one-time discount, i.e., 10-percent-stripe_native-once
+                                recur = price;  // b#593901
+                            }
                             price += Number(setupFee);
                         } else {
                             // calculate recurring price
@@ -5360,7 +5440,7 @@ var JotForm = {
                         // Neil: temporary fix for 287973
                         // because we run the change event for quantity upon loading (to evaluate the conditions),
                         // the associated product checkbox should not change if quantity did not change value
-                        if ($(pair.value.quantityField).tagName !== 'SELECT' 
+                        if ($(pair.value.quantityField).tagName !== 'SELECT'
                             || $(pair.value.quantityField).getSelected().index > 0
                             || $(pair.value.quantityField).getValue() === "0") // also trigger uncheck when value is "0"
                         {
@@ -5610,7 +5690,10 @@ var JotForm = {
                 if (discount.apply) {
                     JotForm.discounts[pid] += "-" + discount.apply;
                 }
-
+                // b#593901 for stripe-native coupons that are good only for one cycle
+                if (discount.duration && discount.duration === 1) {
+                    JotForm.discounts[pid] += "-once";
+                }
                 $$('span[id*="_price"]').each(function (field, id) {
                     // if price container is found and there is a setup fee and this discount applies
                     // to ALL payment for the current subscription item
@@ -6490,7 +6573,7 @@ var JotForm = {
                 if (evt.keyCode == 13 && ["text", "radio", "checkbox", "select-one", "select-multiple"].include(node.type)) {
                     return false;
                 }
-                if (evt.keyCode == 13 && evt.target.hasClassName('form-pagebreak-next') && evt.target.triggerEvent) {
+                if ((evt.keyCode == 13 || evt.which == 32)  && evt.target.hasClassName('form-pagebreak-next') && evt.target.triggerEvent) {
                     evt.target.triggerEvent('mousedown');
                 }
             }
@@ -7326,7 +7409,7 @@ var JotForm = {
                                 case 'control_stripe':
                                     // prevent submit. it will break stripe checkout.
                                     break;
-        
+
                                 default:
                                     // alert('submitting');
                                     form.submit();
@@ -7803,7 +7886,7 @@ var JotForm = {
 
                     } else {
 
-                        if(input.next() && input.next().hasClassName("form-"+input.type+"-other-input")) { //b#641595 if other is checked box should be filled 
+                        if(input.next() && input.next().hasClassName("form-"+input.type+"-other-input")) { //b#641595 if other is checked box should be filled
                             if(input.checked && input.next().value == "") {
                                 return JotForm.errored(input, JotForm.texts.required);
                             }
@@ -7841,11 +7924,13 @@ var JotForm = {
                                             return e.checked;
                                         }
                                     }
-                                }).any()) {
+                                }).any())
+                            {
                                 // for paypalpro payment type radio
                                 if (input.hasClassName('paymentTypeRadios')) {
                                     return JotForm.errored(input, "Please select payment method.");
                                 }
+
                                 return JotForm.errored(input, JotForm.texts.required);
                             }
                         }
@@ -8066,7 +8151,7 @@ var JotForm = {
 
             if(input.next() && input.next().hasClassName("form-"+input.type+"-other-input")) {
                 input.next().observe('keyup', function() {
-                    input.validateInput();     
+                    input.validateInput();
                 });
             }
         }
@@ -8192,7 +8277,7 @@ var JotForm = {
             });
         } catch (e) {
             console.error(e);
-        }   
+        }
         // Hide label description and display Submit buttons
         // Because user has completed the FB login operation and we have collected the info
         $$('.fb-login-buttons').invoke('show');
@@ -8826,6 +8911,34 @@ var JotForm = {
             }
             return randomString;
         }
+    },
+    changeSubmitURL: function(submitURL) {
+      if (submitURL.length > 0) {
+        for (var i = this.forms.length - 1; i >= 0; i--) {
+          var form = this.forms[i];
+          form.action = form.action.replace(/\/\/submit\..*?\//, '//' + submitURL + '/');
+        };
+      }
+    },
+    handleChinaCensorship: function() {
+      this.getClientCountry(function(location) {
+        var country = location.country;
+        if ((country.length > 0 && country.toLowerCase === 'cn')) {
+          this.changeSubmitURL('china.jotfor.ms');
+        }
+      }.bind(this));
+    },
+    getClientCountry: function(callback) {
+      new Ajax.Request(JotForm.url + '/opt/geo.ip.php', {
+        evalJSON: 'force',
+        onComplete: function(res) {
+          if (res.status === 200) {
+            callback(res.responseJSON);
+          } else {
+            callback({ country: '' });
+          }
+        }
+      });
     }
 };
 function getQuerystring(key, default_) {

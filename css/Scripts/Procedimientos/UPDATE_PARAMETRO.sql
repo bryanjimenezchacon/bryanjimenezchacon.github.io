@@ -1,0 +1,6 @@
+create or replace procedure UPDATE_PARAMETRO(pVALOR IN VARCHAR, pPARAMETRO_ID IN NUMBER) is
+begin
+  update PARAMETRO
+    set VALOR = pVALOR, PARAMETRO_id = pPARAMETRO_ID
+      where PARAMETRO_id = pPARAMETRO_ID;
+        end UPDATE_PARAMETRO;

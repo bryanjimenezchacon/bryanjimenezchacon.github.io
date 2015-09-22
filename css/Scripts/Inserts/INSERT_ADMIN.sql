@@ -1,0 +1,5 @@
+insert into PERSONA
+(USERNAME, ES_ADMIN, NACIMIENTO, PRIMER_APELLIDO, SEGUNDO_APELLIDO, NOMBRE, GENERO_ID, CIUDAD_ID)
+values
+('Bryan365', '1', '26/03/1980', 'Torres', 'Molina', 'Bryan',1,1 )
+;

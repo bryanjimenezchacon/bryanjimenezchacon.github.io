@@ -1,0 +1,25 @@
+Cambio en winks y visto por
+----> Revertir
+Ya se revirtio.
+
+Cambio en Persona/Se llama/ nombre -> Persona/tiene/ nombre - apellido1 - apellido2 (para ser mas especificos)
+---> Pichudo
+
+Cambio en ciudad/pais > pais/ciudad (para ir de mayor a menor y discriminar mejor las ciudades del mundo)
+---> Revertir porque no se sabe cual ciudad
+Ya se revirtio.
+
+cambio en contextura/descripcion -> contextura/tipo (para restringir las posibilidades, gruesa,delgada, etc)
+---> No tan pichudo
+
+cambio en Nivel Educacion/ Nombre -> Nivel Educacion/ Grado
+---> Pichudo
+
+cambio en Tipo Pareja/ Nombre -> Tipo Pareja? Sexo (si busca hombre o mujer)
+---> Falta la multiplicidad: personas que les gustan muchos generos
+
+NOTAS: 
+Se podria dividir fecha de nac en dia, mes, anio, para poder extraer menjor cada dato -> Considerar si hay tipo de dato para fecha en OracleDB
+Agregar edad con la fecha de nacimiento menos la actual
+Dividir persona en admin o en usuario -> Herenciaaaaaaa
+Guardar detalles fisicos de la pareja buscada/ideal

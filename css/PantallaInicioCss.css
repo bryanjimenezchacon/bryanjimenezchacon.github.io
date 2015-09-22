@@ -1,0 +1,239 @@
+body {
+		background-color: #666666;
+		background-image: url("images/fondo.jpg");
+		background-size: cover;
+		background-repeat:repeat;
+		color: #d8d8d8;
+		//padding: 14em 0;
+		text-align: center;
+		font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+		position: relative;
+}
+
+head{
+    background-color: black;
+}
+
+.head1{
+    background-color: black;
+    display: list-item;
+    text-align:center;
+    padding: 0.7em 0;
+}
+input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	.button {
+        direction: ltr;
+        display: inline-block;
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-o-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-o-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		background-color: #192024;
+		border-radius: 6px;
+		border: 0;
+		color: #ffffff !important;
+		cursor: pointer;
+		display: inline-block;
+		font-weight: 300;
+		text-transform: uppercase;
+		letter-spacing: 0.125em;
+		font-size: 0.9em;
+		height: 2.85em;
+		line-height: 2.85em;
+		padding: 0 1.75em;
+		text-align: center;
+		text-decoration: none;
+		white-space: nowrap;
+		text-indent: 0.25em;
+	}
+
+		input[type="submit"]:hover,
+		input[type="reset"]:hover,
+		input[type="button"]:hover,
+		.button:hover {
+			background-color: #232d33;
+		}
+
+		input[type="submit"]:active,
+		input[type="reset"]:active,
+		input[type="button"]:active,
+		.button:active {
+			background-color: #0f1315;
+		}
+
+		input[type="submit"].icon,
+		input[type="reset"].icon,
+		input[type="button"].icon,
+		.button.icon {
+			padding-left: 1.35em;
+		}
+
+			input[type="submit"].icon:before,
+			input[type="reset"].icon:before,
+			input[type="button"].icon:before,
+			.button.icon:before {
+				margin-right: 0.5em;
+			}
+
+		input[type="submit"].fit,
+		input[type="reset"].fit,
+		input[type="button"].fit,
+		.button.fit {
+			display: block;
+			margin: 0 0 1em 0;
+			width: 100%;
+		}
+
+		input[type="submit"].small,
+		input[type="reset"].small,
+		input[type="button"].small,
+		.button.small {
+			font-size: 0.7em;
+		}
+
+		input[type="submit"].big,
+		input[type="reset"].big,
+		input[type="button"].big,
+		.button.big {
+			font-size: 1.2em;
+			height: 2.65em;
+			line-height: 2.65em;
+		}
+
+		input[type="submit"].alt,
+		input[type="reset"].alt,
+		input[type="button"].alt,
+		.button.alt {
+			background-color: transparent;
+			box-shadow: inset 0 0 0 1px rgba(144, 144, 144, 0.25);
+			color: #666f77 !important;
+		}
+
+			input[type="submit"].alt:hover,
+			input[type="reset"].alt:hover,
+			input[type="button"].alt:hover,
+			.button.alt:hover {
+				background-color: rgba(144, 144, 144, 0.075);
+			}
+
+			input[type="submit"].alt:active,
+			input[type="reset"].alt:active,
+			input[type="button"].alt:active,
+			.button.alt:active {
+				background-color: rgba(144, 144, 144, 0.2);
+			}
+
+			input[type="submit"].alt.icon:before,
+			input[type="reset"].alt.icon:before,
+			input[type="button"].alt.icon:before,
+			.button.alt.icon:before {
+				color: #bbb;
+			}
+
+		input[type="submit"].special,
+		input[type="reset"].special,
+		input[type="button"].special,
+		.button.special {
+			background-color: #629DD1;
+			color: #ffffff !important;
+		}
+
+			input[type="submit"].special:hover,
+			input[type="reset"].special:hover,
+			input[type="button"].special:hover,
+			.button.special:hover {
+				background-color: #76a9d7;
+			}
+
+			input[type="submit"].special:active,
+			input[type="reset"].special:active,
+			input[type="button"].special:active,
+			.button.special:active {
+				background-color: #4e91cb;
+			}
+
+		input[type="submit"].disabled, input[type="submit"]:disabled,
+		input[type="reset"].disabled,
+		input[type="reset"]:disabled,
+		input[type="button"].disabled,
+		input[type="button"]:disabled,
+		.button.disabled,
+		.button:disabled {
+			background-color: #555f66 !important;
+			box-shadow: inset 0 -0.15em 0 0 rgba(0, 0, 0, 0.15);
+			color: #fff !important;
+			cursor: default;
+			opacity: 0.25;
+		}
+
+#banner {
+		//background-color: #666666;
+		//background-image: url("images/fondo.jpg");
+		//background-size: cover;
+		//background-repeat:repeat;
+		//color: #d8d8d8;
+		padding: 14em 0;
+		text-align: center;
+		position: relative;
+			}
+
+		#banner:before {
+			content: '';
+			position: relative;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(64, 72, 80, 0.25);
+		}
+
+		#banner .inner {
+            top: -70px;
+			position: relative;
+			z-index: 1;
+		}
+
+			#banner .inner :last-child {
+				margin-bottom: 0;
+			}
+
+		#banner .button.alt {
+			box-shadow: inset 0 0 0 1px rgba(144, 144, 144, 0.75);
+			color: #ffffff !important;
+		}
+
+			#banner .button.alt:hover {
+				background-color: rgba(144, 144, 144, 0.275);
+			}
+
+			#banner .button.alt:active {
+				background-color: rgba(144, 144, 144, 0.4);
+			}
+
+			#banner .button.alt.icon:before {
+				color: #c1c1c1;
+			}
+
+		#banner .button {
+			min-width: 12em;
+		}
+		#banner .formulario_registro {
+			position: relative;
+			z-index: 1;
+            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            margin-left: 500px;
+            margin-right: 500px;
+		}
+        
+        #banner .formulario_registro :last-child {
+            margin-bottom: 0;
+        }
+

@@ -430,6 +430,27 @@
   height: 24px;
   cursor: pointer;
 }
+.boton-cancelar {
+  color: #232323 !important;
+  background: #87CEFA;
+  box-shadow: none;
+  text-shadow: none;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  font-size: 1.15em;
+  padding: 12px 18px;
+  display: block;
+  margin: 0;
+  font-family: "Lobster", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  margin:0px;    
+  overflow:visible;
+  padding:1px 6px;
+  width:100%;
+	}
+    
 .form-checkbox-item:not(#foo) label:after {
   content: '';
   position: absolute;
@@ -574,7 +595,7 @@
 .form-all .form-submit-reset,
 .form-all .form-submit-print {
   color: #ffffff !important;
-  background: #e09c5f;
+  background: #4169E1;
   box-shadow: none;
   text-shadow: none;
 }
@@ -968,6 +989,15 @@ li[data-type="control_image"] img {
           </div>
         </div>
       </li>
+    <div id="cid_33" class="form-input-wide">
+          <div style="margin-left: 156px; text-align: center;" class="form-buttons-wrapper">
+
+            <button id="input_33" type="submit" class="boton-cancelar" onClick="window.location.href='../Formulario Estilo/FormularioEstilo.html'">
+              Atrás
+            </button>
+   </div>
+      </div> 
+  
       <li class="form-line" data-type="control_image" id="id_12">
         <div id="cid_12" class="form-input-wide">
           <div style="text-align:right;">
@@ -976,7 +1006,7 @@ li[data-type="control_image"] img {
         </div>
       </li>
       <li style="display:none">
-        Should be Empty:
+        Debería esta vacío:
         <input type="text" name="website" value="" />
       </li>
     </ul>

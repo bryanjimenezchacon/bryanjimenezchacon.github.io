@@ -201,6 +201,27 @@
 .form-checkbox-item:last-child {
   padding-bottom: 0;
 }
+
+  .boton-cancelar {
+  color: #232323 !important;
+  background: #AC743C;
+  box-shadow: none;
+  text-shadow: none;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  font-size: 1.15em;
+  padding: 12px 18px;
+  display: block;
+  margin: 0;
+  font-family: "Lobster", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  margin:0px;    
+  overflow:visible;
+  padding:1px 6px;
+  width:100%;
+	}
 /* ömer */
 .form-single-column .form-checkbox-item,
 .form-single-column .form-radio-item {
@@ -816,6 +837,26 @@ li[data-type="control_image"] img {
   .form-collapse-table {
     margin: 0 5%;
   }
+    .boton-cancelar {
+  color: #232323 !important;
+  background:#FFB676;
+  box-shadow: none;
+  text-shadow: none;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  font-size: 1.15em;
+  padding: 12px 18px;
+  display: block;
+  margin: 0;
+  font-family: "Lobster", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  margin:0px;    
+  overflow:visible;
+  padding:1px 6px;
+  width:100%;
+	}
 }
 /* | */
 
@@ -835,7 +876,9 @@ li[data-type="control_image"] img {
 <script src="https://js.jotform.com/WidgetsServer.js" type="text/javascript"></script>
 <script type="text/javascript">
    JotForm.init(function(){
-      JotForm.description('input_4', 'Seleccione su color de piel');
+      JotForm.description('input_4', 'Seleccione su tipo de fumador');
+	  JotForm.description('input_5', 'Seleccione su tipo de bebedor');
+	  
       setTimeout(function() {
           $('input_9').hint('6');
        }, 20);
@@ -967,21 +1010,6 @@ li[data-type="control_image"] img {
           </select>
         </div>
       </li>
-      <li class="form-line jf-required" data-type="control_dropdown" id="id_13">
-        <label class="form-label form-label-left form-label-auto" id="label_13" for="input_13">
-          ¿Le gustaría tener mascotas?
-          <span class="form-required">
-            *
-          </span>
-        </label>
-        <div id="cid_13" class="form-input jf-required">
-          <select class="form-dropdown validate[required]" style="width:150px" id="input_13" name="q13_leGustaria">
-            <option value="">  </option>
-            <option value="Si"> Si </option>
-            <option value="No"> No </option>
-          </select>
-        </div>
-      </li>
       <li class="form-line" data-type="control_button" id="id_2">
         <div id="cid_2" class="form-input-wide">
           <div style="margin-left:156px" class="form-buttons-wrapper">
@@ -991,6 +1019,15 @@ li[data-type="control_image"] img {
           </div>
         </div>
       </li>
+      
+     <div id="cid_33" class="form-input-wide">
+          <div style="margin-left: 156px; text-align: center;" class="form-buttons-wrapper">
+
+            <button id="input_33" type="submit" class="boton-cancelar" onClick="window.location.href='../Formulario Fisico/FormularioFisico.html'">
+              Atrás
+            </button>
+   </div>
+      </div> 
       <li class="form-line" data-type="control_image" id="id_15">
         <div id="cid_15" class="form-input-wide">
           <div style="text-align:right;">
@@ -999,7 +1036,7 @@ li[data-type="control_image"] img {
         </div>
       </li>
       <li style="display:none">
-        Should be Empty:
+        Debería estar vacío:
         <input type="text" name="website" value="" />
       </li>
     </ul>
