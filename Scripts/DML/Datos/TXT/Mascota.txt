@@ -1,0 +1,8 @@
+0	Gato
+1	Perro
+2	Pez
+3	Loro
+4	Mono
+5	Iguana
+6	Búho
+7	Sapo

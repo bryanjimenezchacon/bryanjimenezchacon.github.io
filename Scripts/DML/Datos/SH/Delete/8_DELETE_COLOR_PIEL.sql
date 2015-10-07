@@ -1,0 +1,1 @@
+delete COLOR_PIEL;

@@ -1,0 +1,1 @@
+delete FRECUENCIA_EJERCICIO;

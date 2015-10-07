@@ -1,0 +1,1 @@
+delete CATEGORIA_OCUPACION;

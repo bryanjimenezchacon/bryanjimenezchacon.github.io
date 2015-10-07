@@ -1,0 +1,1 @@
+delete ESTADO_CIVIL;

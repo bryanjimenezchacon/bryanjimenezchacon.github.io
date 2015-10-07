@@ -1,0 +1,9 @@
+0	Café
+1	Blanco
+2	Negro
+3	Rubio claro
+4	Rubio oscuro
+5	Rojo
+6	Azul
+7	Verde
+8	Rosado

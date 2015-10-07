@@ -1,0 +1,30 @@
+0	Asatru
+1	Bahai
+2	Brahamismo
+3	Budismo
+4	Cao Dai
+5	Cristianismo
+6	Confucionismo
+7	Deismo
+8	Druidismo
+9	Hinduísmo
+10	I. Unit. Universal
+11	Islam
+12	Jainismo
+13	Judaismo
+14	Massai
+15	Nuer
+16	Oromo
+17	Panteismo
+18	Rastafarismo
+19	Sabaean Mandeans
+20	Santa Muerte
+21	Shintoismo
+22	Shona
+23	Sikismo
+24	Sufismo
+25	Taoismo
+26	Vudú
+27	Yezidismo
+28	Yoruba
+29	Zoroastrism

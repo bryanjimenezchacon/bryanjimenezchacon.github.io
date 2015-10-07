@@ -1,0 +1,13 @@
+0	Chino
+1	Inglés
+2	Hindi
+3	Español
+4	Ruso
+5	Árabe
+6	Bengalí
+7	Portugués
+8	Indonesio
+9	Francés
+10	Japonés
+11	Alemán
+12	Turco

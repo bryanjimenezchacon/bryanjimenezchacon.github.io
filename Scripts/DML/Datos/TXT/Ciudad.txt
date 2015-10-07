@@ -1,0 +1,10 @@
+0	San José	0
+1	Heredia	0
+2	Alajuela	0
+3	Cartago	0
+4	Liberia	0
+5	Tegucigalpa	3
+6	San Salvador	4
+7	Jinotega	1
+8	Chinandega	1
+9	Isla Ometepe	1

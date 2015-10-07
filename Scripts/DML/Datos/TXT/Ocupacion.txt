@@ -1,0 +1,16 @@
+0	Ing. informático
+1	Mante. electromec.
+2	Admin. público
+3	Auditor contable
+4	Farmacólogo
+5	Enfermero
+6	Gerontólogo
+7	Maestro de kinder
+8	Sociólogo
+9	Antropólogo
+10	Prof. de filosofía
+11	Lingüista
+12	Presidente
+13	Diputado
+14	Juez
+15	Notario

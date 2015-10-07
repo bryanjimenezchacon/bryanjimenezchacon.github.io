@@ -1,0 +1,5 @@
+0	Todos los días
+1	Semanalmente
+2	Mensualmente
+3	Cada 3-6 meses
+4	Rara vez

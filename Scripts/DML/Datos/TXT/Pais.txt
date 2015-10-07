@@ -1,0 +1,5 @@
+0	Costa Rica                  
+1	Nicaragua
+2	Panamá
+3	Honduras
+4	El Salvador

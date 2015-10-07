@@ -1,0 +1,3 @@
+0	Casado
+1	Soltero
+2	Unión Libre

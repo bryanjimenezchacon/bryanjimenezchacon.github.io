@@ -1,0 +1,8 @@
+0	Deporte
+1	Manualidades
+2	Arte y música
+3	Juegos de mesa
+4	Al aire libre
+5	Videojuegos
+6	Películas y series
+7	Religión

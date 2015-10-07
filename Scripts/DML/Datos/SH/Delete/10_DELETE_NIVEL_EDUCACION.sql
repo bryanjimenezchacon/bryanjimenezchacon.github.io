@@ -1,0 +1,1 @@
+delete NIVEL_EDUCACION;

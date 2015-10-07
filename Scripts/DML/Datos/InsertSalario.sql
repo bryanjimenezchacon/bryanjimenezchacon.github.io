@@ -1,0 +1,87 @@
+INSERT ALL
+into SALARIO
+(SALARIO_id, RANGO)
+values
+(0, 'Menos de 100.000')
+into SALARIO
+(SALARIO_id, RANGO)
+values
+(1, '100.000-250.000')
+into SALARIO
+(SALARIO_id, RANGO)
+values
+(2, '250.000-500.000')
+into SALARIO
+(SALARIO_id, RANGO)
+values
+(3, '500.000-750.000')
+into SALARIO
+(SALARIO_id, RANGO)
+values
+(4, '750.000-1.000.000')
+into SALARIO
+(SALARIO_id, RANGO)
+values
+(5, '1.000.000-1.250.000')
+into SALARIO
+(SALARIO_id, RANGO)
+values
+(6, '1.250.000-1.500.000')
+into SALARIO
+(SALARIO_id, RANGO)
+values
+(7, '1.500.000-1.750.000')
+into SALARIO
+(SALARIO_id, RANGO)
+values
+(8, '1.750.000-2.000.000')
+into SALARIO
+(SALARIO_id, RANGO)
+values
+(9, '2.000.000-2.500.000')
+into SALARIO
+(SALARIO_id, RANGO)
+values
+(10, '2.500.000-3.000.000')
+into SALARIO
+(SALARIO_id, RANGO)
+values
+(11, '3.000.000-3.500.000')
+into SALARIO
+(SALARIO_id, RANGO)
+values
+(12, '3.500.000-4.000.000')
+into SALARIO
+(SALARIO_id, RANGO)
+values
+(13, '4.000.000-4.500.000')
+into SALARIO
+(SALARIO_id, RANGO)
+values
+(14, '4.500.000-5.000.000')
+into SALARIO
+(SALARIO_id, RANGO)
+values
+(15, '5.000.000-6.000.000')
+into SALARIO
+(SALARIO_id, RANGO)
+values
+(16, '6.000.000-7.000.000')
+into SALARIO
+(SALARIO_id, RANGO)
+values
+(17, '7.000.000-8.000.000')
+into SALARIO
+(SALARIO_id, RANGO)
+values
+(18, '8.000.000-9.000.000')
+into SALARIO
+(SALARIO_id, RANGO)
+values
+(19, '9.000.000-10.000.000')
+into SALARIO
+(SALARIO_id, RANGO)
+values
+(20, 'Más de 10.000.000')
+
+SELECT 1 from DUAL;

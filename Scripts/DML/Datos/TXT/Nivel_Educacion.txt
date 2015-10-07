@@ -1,0 +1,17 @@
+0	Kinder completo
+1	Primaria incompleta
+2	Primaria completa
+3	Tercer ciclo incompleto
+4	Tercer ciclo completo
+5	Educación diversificada incompleta
+6	Educación diversificada completa
+7	Técnico o diplomado incompleto
+8	Técnico o diplomado completo
+9	Bachillerato universitario incompleto
+10	Bachillerato universitario completo
+11	Licenciatura incompleta
+12	Licenciatura completa
+13	Maestría incompleta
+14	Maestría completa
+15	Doctorado incompleto
+16	Doctorado completo

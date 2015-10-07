@@ -1,0 +1,7 @@
+CREATE OR REPLACE TRIGGER beforeInsert_tipo_relacion
+       BEFORE INSERT
+       ON GE.tipo_relacion FOR EACH ROW
+BEGIN
+  :NEW.USUARIO_CREACION:= USER;
+  :NEW.FEC_CREACION:= SYSDATE;
+END;

@@ -1,0 +1,6 @@
+0	Blanco pálido
+1	Blanco
+2	Blanco crema
+3	Moreno moderado
+4	Moreno oscuro
+5	Moreno muy oscuro

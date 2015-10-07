@@ -1,0 +1,5 @@
+0	Verde
+1	Café
+2	Gris
+3	Negro
+4	Azul

@@ -1,0 +1,26 @@
+INSERT ALL
+into FRECUENCIA_EJERCICIO
+(FRECUENCIA_EJERCICIO_id, RANGO)
+values
+(0, 'Todos los días')
+into FRECUENCIA_EJERCICIO
+(FRECUENCIA_EJERCICIO_id, RANGO)
+values
+(1, '3-5 veces por semana')
+into FRECUENCIA_EJERCICIO
+(FRECUENCIA_EJERCICIO_id, RANGO)
+values
+(2, '1-2 veces por semana')
+into FRECUENCIA_EJERCICIO
+(FRECUENCIA_EJERCICIO_id, RANGO)
+values
+(3, 'Cada 2-3 semanas')
+into FRECUENCIA_EJERCICIO
+(FRECUENCIA_EJERCICIO_id, RANGO)
+values
+(4, 'Cada 1-2 meses')
+into FRECUENCIA_EJERCICIO
+(FRECUENCIA_EJERCICIO_id, RANGO)
+values
+(5, 'Rara vez')
+SELECT 1 from DUAL;

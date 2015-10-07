@@ -1,0 +1,5 @@
+0	Muy gruesa
+1	Gruesa
+2	Ni sobra ni falta
+3	Delgada
+4	Muy delgada

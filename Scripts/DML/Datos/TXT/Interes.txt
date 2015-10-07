@@ -1,0 +1,24 @@
+0	Futbol
+1	Basketball
+2	Golf
+3	Tennis
+4	Hacer country
+5	Coser
+6	Quilting
+7	Dibujar comics
+8	Pintar
+9	Tocar música
+10	Cantar karaoke
+11	White water rafting
+12	Pesca
+13	Cacería
+14	First person shooter
+15	Arcade
+16	Plataformas
+17	Videojuegos indies
+18	Pornografía sadomasoquista
+19	Películas románticas
+20	Bollywood
+21	Pastoral juvenil
+22	Sacrificio humano precolombino
+23	Comer espagueti y albóndigas

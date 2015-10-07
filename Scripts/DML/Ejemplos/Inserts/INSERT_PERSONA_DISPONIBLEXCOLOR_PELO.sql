@@ -1,0 +1,6 @@
+insert into PERSONA_DISPONIBLEXCOLOR_PELO
+(USERNAME, COLOR_PELO_ID)
+values
+('Ale27', '1' )
+;
+

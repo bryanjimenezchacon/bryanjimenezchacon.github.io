@@ -1,0 +1,10 @@
+0	Correr
+1	Nadar
+2	Andar en bicicleta
+3	Futbol
+4	Basketbol
+5	Beisbol
+6	Atletismo
+7	Gimnasio
+8	Gimnasia
+9	Parkour
