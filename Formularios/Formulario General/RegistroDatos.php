@@ -1117,7 +1117,8 @@ li[data-type="control_image"] img {
       <li class="form-line" data-type="control_button" id="id_32">
         <div id="cid_32" class="form-input-wide">
           <div style="margin-left:156px" class="form-buttons-wrapper">
-            <button id="input_32" type="submit" class="form-submit-button" onClick="window.location.href='../Formulario Fisico/FormularioFisico.html'">
+            <button id="input_32" type="submit" class="form-submit-button" 
+			action = "procesarDatosGenerales.php"> /* onClick="window.location.href='../Formulario Fisico/FormularioFisico.php'"> */
               Siguiente
             </button>
           </div>

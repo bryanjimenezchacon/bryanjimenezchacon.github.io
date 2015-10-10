@@ -1,0 +1,320 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_pdf}
+<div class="rnr-c rnr-ch rnr-c-pdf">
+
+{BEGIN printbuttons}
+<div  class="style1 rnr-bl rnr-b-printbuttons {$brickclass_printbuttons}">{BEGIN divideintopages_block}
+<a href="#" class="divideintopages rnr-button button" {$divideintopages_attrs}>Prepare for printing</a>
+{END divideintopages_block}
+</div>
+{END printbuttons}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div class="rnr-c rnr-ch rnr-c-master">
+
+{BEGIN mastertable_block}
+<div  class="style1 rnr-bl rnr-b-masterinfoprint {$brickclass_masterinfoprint}">{$showmasterfile}
+</div>
+{END mastertable_block}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_master}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+
+{BEGIN container_pageheader}
+<div class="rnr-c rnr-cv rnr-c-pageheader">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-printheader {$brickclass_printheader}">	<h1>{$pagetitlelabel GE_PERSONA print}</h1>
+</div>
+
+
+{BEGIN page_number}
+<div  class="rnr-brickcontents style1 rnr-b-page_of_print {$brickclass_page_of_print}"><h1>Página <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></h1></div>{END page_number}
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="rnr-c rnr-c-grid rnr-b-grid rnr-gridtable rp-maintable" cellpadding="0">
+	<thead>
+	{BEGIN grid_header}
+<tr class="rnr-toprow style1 {$gridHeader_class}" >
+{BEGIN record_header}
+		{BEGIN USERNAME_fieldheadercolumn}
+<th class="runner-cc {$USERNAME_class}" {$USERNAME_style}>
+	{BEGIN USERNAME_fieldheader}
+	<b>{$label GE_PERSONA USERNAME}</b>
+	{END USERNAME_fieldheader}
+</th>
+{END USERNAME_fieldheadercolumn}
+	{BEGIN ES_ADMIN_fieldheadercolumn}
+<th class="runner-cc {$ES_ADMIN_class}" {$ES_ADMIN_style}>
+	{BEGIN ES_ADMIN_fieldheader}
+	<b>{$label GE_PERSONA ES_ADMIN}</b>
+	{END ES_ADMIN_fieldheader}
+</th>
+{END ES_ADMIN_fieldheadercolumn}
+	{BEGIN NACIMIENTO_fieldheadercolumn}
+<th class="runner-cc {$NACIMIENTO_class}" {$NACIMIENTO_style}>
+	{BEGIN NACIMIENTO_fieldheader}
+	<b>{$label GE_PERSONA NACIMIENTO}</b>
+	{END NACIMIENTO_fieldheader}
+</th>
+{END NACIMIENTO_fieldheadercolumn}
+	{BEGIN PRIMER_APELLIDO_fieldheadercolumn}
+<th class="runner-cc {$PRIMER_APELLIDO_class}" {$PRIMER_APELLIDO_style}>
+	{BEGIN PRIMER_APELLIDO_fieldheader}
+	<b>{$label GE_PERSONA PRIMER_APELLIDO}</b>
+	{END PRIMER_APELLIDO_fieldheader}
+</th>
+{END PRIMER_APELLIDO_fieldheadercolumn}
+	{BEGIN SEGUNDO_APELLIDO_fieldheadercolumn}
+<th class="runner-cc {$SEGUNDO_APELLIDO_class}" {$SEGUNDO_APELLIDO_style}>
+	{BEGIN SEGUNDO_APELLIDO_fieldheader}
+	<b>{$label GE_PERSONA SEGUNDO_APELLIDO}</b>
+	{END SEGUNDO_APELLIDO_fieldheader}
+</th>
+{END SEGUNDO_APELLIDO_fieldheadercolumn}
+	{BEGIN NOMBRE_fieldheadercolumn}
+<th class="runner-cc {$NOMBRE_class}" {$NOMBRE_style}>
+	{BEGIN NOMBRE_fieldheader}
+	<b>{$label GE_PERSONA NOMBRE}</b>
+	{END NOMBRE_fieldheader}
+</th>
+{END NOMBRE_fieldheadercolumn}
+	{BEGIN GENERO_ID_fieldheadercolumn}
+<th class="runner-cc {$GENERO_ID_class}" {$GENERO_ID_style}>
+	{BEGIN GENERO_ID_fieldheader}
+	<b>{$label GE_PERSONA GENERO_ID}</b>
+	{END GENERO_ID_fieldheader}
+</th>
+{END GENERO_ID_fieldheadercolumn}
+	{BEGIN CIUDAD_ID_fieldheadercolumn}
+<th class="runner-cc {$CIUDAD_ID_class}" {$CIUDAD_ID_style}>
+	{BEGIN CIUDAD_ID_fieldheader}
+	<b>{$label GE_PERSONA CIUDAD_ID}</b>
+	{END CIUDAD_ID_fieldheader}
+</th>
+{END CIUDAD_ID_fieldheadercolumn}
+	{BEGIN SLOGAN_fieldheadercolumn}
+<th class="runner-cc {$SLOGAN_class}" {$SLOGAN_style}>
+	{BEGIN SLOGAN_fieldheader}
+	<b>{$label GE_PERSONA SLOGAN}</b>
+	{END SLOGAN_fieldheader}
+</th>
+{END SLOGAN_fieldheadercolumn}
+	{BEGIN FEC_CREACION_fieldheadercolumn}
+<th class="runner-cc {$FEC_CREACION_class}" {$FEC_CREACION_style}>
+	{BEGIN FEC_CREACION_fieldheader}
+	<b>{$label GE_PERSONA FEC_CREACION}</b>
+	{END FEC_CREACION_fieldheader}
+</th>
+{END FEC_CREACION_fieldheadercolumn}
+	{BEGIN USUARIO_CREACION_fieldheadercolumn}
+<th class="runner-cc {$USUARIO_CREACION_class}" {$USUARIO_CREACION_style}>
+	{BEGIN USUARIO_CREACION_fieldheader}
+	<b>{$label GE_PERSONA USUARIO_CREACION}</b>
+	{END USUARIO_CREACION_fieldheader}
+</th>
+{END USUARIO_CREACION_fieldheadercolumn}
+	{BEGIN FEC_ULTIMA_MOD_fieldheadercolumn}
+<th class="runner-cc {$FEC_ULTIMA_MOD_class}" {$FEC_ULTIMA_MOD_style}>
+	{BEGIN FEC_ULTIMA_MOD_fieldheader}
+	<b>{$label GE_PERSONA FEC_ULTIMA_MOD}</b>
+	{END FEC_ULTIMA_MOD_fieldheader}
+</th>
+{END FEC_ULTIMA_MOD_fieldheadercolumn}
+	{BEGIN USUARIO_ULTIMA_MOD_fieldheadercolumn}
+<th class="runner-cc {$USUARIO_ULTIMA_MOD_class}" {$USUARIO_ULTIMA_MOD_style}>
+	{BEGIN USUARIO_ULTIMA_MOD_fieldheader}
+	<b>{$label GE_PERSONA USUARIO_ULTIMA_MOD}</b>
+	{END USUARIO_ULTIMA_MOD_fieldheader}
+</th>
+{END USUARIO_ULTIMA_MOD_fieldheadercolumn}
+	{BEGIN EMAIL_fieldheadercolumn}
+<th class="runner-cc {$EMAIL_class}" {$EMAIL_style}>
+	{BEGIN EMAIL_fieldheader}
+	<b>{$label GE_PERSONA EMAIL}</b>
+	{END EMAIL_fieldheader}
+</th>
+{END EMAIL_fieldheadercolumn}
+	{BEGIN CLAVE_fieldheadercolumn}
+<th class="runner-cc {$CLAVE_class}" {$CLAVE_style}>
+	{BEGIN CLAVE_fieldheader}
+	<b>{$label GE_PERSONA CLAVE}</b>
+	{END CLAVE_fieldheader}
+</th>
+{END CLAVE_fieldheadercolumn}
+		
+	<th class="rnr-edge">&nbsp;</th>
+	{BEGIN endrecordheader_block}
+	<th class="rnr-cs">&nbsp;</th>
+	{END endrecordheader_block}
+	{END record_header}
+</tr>
+{END grid_header}
+
+	</thead>
+	<tbody>	
+	{BEGIN grid_row}
+	<tr class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+				{BEGIN USERNAME_fieldcolumn}
+<td  class="runner-cc {$USERNAME_class}" {$USERNAME_style} {$recordattrs}>
+	{$USERNAME_value}
+</td>
+{END USERNAME_fieldcolumn}
+	{BEGIN ES_ADMIN_fieldcolumn}
+<td  class="runner-cc {$ES_ADMIN_class}" {$ES_ADMIN_style} {$recordattrs}>
+	{$ES_ADMIN_value}
+</td>
+{END ES_ADMIN_fieldcolumn}
+	{BEGIN NACIMIENTO_fieldcolumn}
+<td  class="runner-cc {$NACIMIENTO_class}" {$NACIMIENTO_style} {$recordattrs}>
+	{$NACIMIENTO_value}
+</td>
+{END NACIMIENTO_fieldcolumn}
+	{BEGIN PRIMER_APELLIDO_fieldcolumn}
+<td  class="runner-cc {$PRIMER_APELLIDO_class}" {$PRIMER_APELLIDO_style} {$recordattrs}>
+	{$PRIMER_APELLIDO_value}
+</td>
+{END PRIMER_APELLIDO_fieldcolumn}
+	{BEGIN SEGUNDO_APELLIDO_fieldcolumn}
+<td  class="runner-cc {$SEGUNDO_APELLIDO_class}" {$SEGUNDO_APELLIDO_style} {$recordattrs}>
+	{$SEGUNDO_APELLIDO_value}
+</td>
+{END SEGUNDO_APELLIDO_fieldcolumn}
+	{BEGIN NOMBRE_fieldcolumn}
+<td  class="runner-cc {$NOMBRE_class}" {$NOMBRE_style} {$recordattrs}>
+	{$NOMBRE_value}
+</td>
+{END NOMBRE_fieldcolumn}
+	{BEGIN GENERO_ID_fieldcolumn}
+<td  class="runner-cc {$GENERO_ID_class}" {$GENERO_ID_style} {$recordattrs}>
+	{$GENERO_ID_value}
+</td>
+{END GENERO_ID_fieldcolumn}
+	{BEGIN CIUDAD_ID_fieldcolumn}
+<td  class="runner-cc {$CIUDAD_ID_class}" {$CIUDAD_ID_style} {$recordattrs}>
+	{$CIUDAD_ID_value}
+</td>
+{END CIUDAD_ID_fieldcolumn}
+	{BEGIN SLOGAN_fieldcolumn}
+<td  class="runner-cc {$SLOGAN_class}" {$SLOGAN_style} {$recordattrs}>
+	{$SLOGAN_value}
+</td>
+{END SLOGAN_fieldcolumn}
+	{BEGIN FEC_CREACION_fieldcolumn}
+<td  class="runner-cc {$FEC_CREACION_class}" {$FEC_CREACION_style} {$recordattrs}>
+	{$FEC_CREACION_value}
+</td>
+{END FEC_CREACION_fieldcolumn}
+	{BEGIN USUARIO_CREACION_fieldcolumn}
+<td  class="runner-cc {$USUARIO_CREACION_class}" {$USUARIO_CREACION_style} {$recordattrs}>
+	{$USUARIO_CREACION_value}
+</td>
+{END USUARIO_CREACION_fieldcolumn}
+	{BEGIN FEC_ULTIMA_MOD_fieldcolumn}
+<td  class="runner-cc {$FEC_ULTIMA_MOD_class}" {$FEC_ULTIMA_MOD_style} {$recordattrs}>
+	{$FEC_ULTIMA_MOD_value}
+</td>
+{END FEC_ULTIMA_MOD_fieldcolumn}
+	{BEGIN USUARIO_ULTIMA_MOD_fieldcolumn}
+<td  class="runner-cc {$USUARIO_ULTIMA_MOD_class}" {$USUARIO_ULTIMA_MOD_style} {$recordattrs}>
+	{$USUARIO_ULTIMA_MOD_value}
+</td>
+{END USUARIO_ULTIMA_MOD_fieldcolumn}
+	{BEGIN EMAIL_fieldcolumn}
+<td  class="runner-cc {$EMAIL_class}" {$EMAIL_style} {$recordattrs}>
+	{$EMAIL_value}
+</td>
+{END EMAIL_fieldcolumn}
+	{BEGIN CLAVE_fieldcolumn}
+<td  class="runner-cc {$CLAVE_class}" {$CLAVE_style} {$recordattrs}>
+	{$CLAVE_value}
+</td>
+{END CLAVE_fieldcolumn}
+
+		<td class="rnr-edge" {$recordattrs}>&nbsp;</td>
+		{BEGIN endrecord_block}
+		<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+		{END endrecord_block}
+										
+		{END grid_record}
+
+	</tr>
+{END grid_row}
+
+
+	
+	</tbody>
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

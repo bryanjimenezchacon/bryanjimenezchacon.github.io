@@ -1,0 +1,388 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_search}
+<div class="rnr-c rnr-cv rnr-c-search">
+
+{BEGIN searchheader}
+<div  class="rnr-brickcontents style2 rnr-b-srchheader {$brickclass_srchheader}"><span>	<h1>{$pagetitlelabel GE_PERSONA search}</h1>
+</span></div>{END searchheader}
+
+
+{BEGIN conditions_block}
+<div  class="rnr-brickcontents style1 rnr-b-srchconditions {$brickclass_srchconditions}">	<center>
+	<span class=fieldname>Criterio:&nbsp;</span>	
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$all_checkbox}><label for="all_checkbox"> Todas las condiciones</label>
+	&nbsp;&nbsp;&nbsp;
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$any_checkbox}><label for="any_checkbox"> Ninguna condición</label>
+	</center></div>{END conditions_block}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-srchfields {$brickclass_srchfields}"><table class="fieldGrid">
+	<tr>
+		<td>&nbsp;</td>
+		<td>NO</td>
+		<td colspan=3>&nbsp; </td>
+	</tr>
+	<tr class="{$fielddispclass_USERNAME}">
+	{BEGIN USERNAME_fieldblock}		
+	<td>
+		{$label GE_PERSONA USERNAME}
+	</td>
+	<td>
+		<input type="checkbox" {$USERNAME_notbox}>
+	</td>
+	<td>
+		{$searchtype_USERNAME}
+	</td>
+	<td>
+		{$USERNAME_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$USERNAME_editcontrol1}&nbsp;
+	</td>
+{END USERNAME_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_ES_ADMIN}">
+	{BEGIN ES_ADMIN_fieldblock}		
+	<td>
+		{$label GE_PERSONA ES_ADMIN}
+	</td>
+	<td>
+		<input type="checkbox" {$ES_ADMIN_notbox}>
+	</td>
+	<td>
+		{$searchtype_ES_ADMIN}
+	</td>
+	<td>
+		{$ES_ADMIN_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$ES_ADMIN_editcontrol1}&nbsp;
+	</td>
+{END ES_ADMIN_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_NACIMIENTO}">
+	{BEGIN NACIMIENTO_fieldblock}		
+	<td>
+		{$label GE_PERSONA NACIMIENTO}
+	</td>
+	<td>
+		<input type="checkbox" {$NACIMIENTO_notbox}>
+	</td>
+	<td>
+		{$searchtype_NACIMIENTO}
+	</td>
+	<td>
+		{$NACIMIENTO_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$NACIMIENTO_editcontrol1}&nbsp;
+	</td>
+{END NACIMIENTO_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_PRIMER_APELLIDO}">
+	{BEGIN PRIMER_APELLIDO_fieldblock}		
+	<td>
+		{$label GE_PERSONA PRIMER_APELLIDO}
+	</td>
+	<td>
+		<input type="checkbox" {$PRIMER_APELLIDO_notbox}>
+	</td>
+	<td>
+		{$searchtype_PRIMER_APELLIDO}
+	</td>
+	<td>
+		{$PRIMER_APELLIDO_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$PRIMER_APELLIDO_editcontrol1}&nbsp;
+	</td>
+{END PRIMER_APELLIDO_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_SEGUNDO_APELLIDO}">
+	{BEGIN SEGUNDO_APELLIDO_fieldblock}		
+	<td>
+		{$label GE_PERSONA SEGUNDO_APELLIDO}
+	</td>
+	<td>
+		<input type="checkbox" {$SEGUNDO_APELLIDO_notbox}>
+	</td>
+	<td>
+		{$searchtype_SEGUNDO_APELLIDO}
+	</td>
+	<td>
+		{$SEGUNDO_APELLIDO_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$SEGUNDO_APELLIDO_editcontrol1}&nbsp;
+	</td>
+{END SEGUNDO_APELLIDO_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_NOMBRE}">
+	{BEGIN NOMBRE_fieldblock}		
+	<td>
+		{$label GE_PERSONA NOMBRE}
+	</td>
+	<td>
+		<input type="checkbox" {$NOMBRE_notbox}>
+	</td>
+	<td>
+		{$searchtype_NOMBRE}
+	</td>
+	<td>
+		{$NOMBRE_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$NOMBRE_editcontrol1}&nbsp;
+	</td>
+{END NOMBRE_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_GENERO_ID}">
+	{BEGIN GENERO_ID_fieldblock}		
+	<td>
+		{$label GE_PERSONA GENERO_ID}
+	</td>
+	<td>
+		<input type="checkbox" {$GENERO_ID_notbox}>
+	</td>
+	<td>
+		{$searchtype_GENERO_ID}
+	</td>
+	<td>
+		{$GENERO_ID_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$GENERO_ID_editcontrol1}&nbsp;
+	</td>
+{END GENERO_ID_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_CIUDAD_ID}">
+	{BEGIN CIUDAD_ID_fieldblock}		
+	<td>
+		{$label GE_PERSONA CIUDAD_ID}
+	</td>
+	<td>
+		<input type="checkbox" {$CIUDAD_ID_notbox}>
+	</td>
+	<td>
+		{$searchtype_CIUDAD_ID}
+	</td>
+	<td>
+		{$CIUDAD_ID_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$CIUDAD_ID_editcontrol1}&nbsp;
+	</td>
+{END CIUDAD_ID_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_SLOGAN}">
+	{BEGIN SLOGAN_fieldblock}		
+	<td>
+		{$label GE_PERSONA SLOGAN}
+	</td>
+	<td>
+		<input type="checkbox" {$SLOGAN_notbox}>
+	</td>
+	<td>
+		{$searchtype_SLOGAN}
+	</td>
+	<td>
+		{$SLOGAN_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$SLOGAN_editcontrol1}&nbsp;
+	</td>
+{END SLOGAN_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_FEC_CREACION}">
+	{BEGIN FEC_CREACION_fieldblock}		
+	<td>
+		{$label GE_PERSONA FEC_CREACION}
+	</td>
+	<td>
+		<input type="checkbox" {$FEC_CREACION_notbox}>
+	</td>
+	<td>
+		{$searchtype_FEC_CREACION}
+	</td>
+	<td>
+		{$FEC_CREACION_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$FEC_CREACION_editcontrol1}&nbsp;
+	</td>
+{END FEC_CREACION_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_USUARIO_CREACION}">
+	{BEGIN USUARIO_CREACION_fieldblock}		
+	<td>
+		{$label GE_PERSONA USUARIO_CREACION}
+	</td>
+	<td>
+		<input type="checkbox" {$USUARIO_CREACION_notbox}>
+	</td>
+	<td>
+		{$searchtype_USUARIO_CREACION}
+	</td>
+	<td>
+		{$USUARIO_CREACION_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$USUARIO_CREACION_editcontrol1}&nbsp;
+	</td>
+{END USUARIO_CREACION_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_FEC_ULTIMA_MOD}">
+	{BEGIN FEC_ULTIMA_MOD_fieldblock}		
+	<td>
+		{$label GE_PERSONA FEC_ULTIMA_MOD}
+	</td>
+	<td>
+		<input type="checkbox" {$FEC_ULTIMA_MOD_notbox}>
+	</td>
+	<td>
+		{$searchtype_FEC_ULTIMA_MOD}
+	</td>
+	<td>
+		{$FEC_ULTIMA_MOD_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$FEC_ULTIMA_MOD_editcontrol1}&nbsp;
+	</td>
+{END FEC_ULTIMA_MOD_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_USUARIO_ULTIMA_MOD}">
+	{BEGIN USUARIO_ULTIMA_MOD_fieldblock}		
+	<td>
+		{$label GE_PERSONA USUARIO_ULTIMA_MOD}
+	</td>
+	<td>
+		<input type="checkbox" {$USUARIO_ULTIMA_MOD_notbox}>
+	</td>
+	<td>
+		{$searchtype_USUARIO_ULTIMA_MOD}
+	</td>
+	<td>
+		{$USUARIO_ULTIMA_MOD_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$USUARIO_ULTIMA_MOD_editcontrol1}&nbsp;
+	</td>
+{END USUARIO_ULTIMA_MOD_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_EMAIL}">
+	{BEGIN EMAIL_fieldblock}		
+	<td>
+		{$label GE_PERSONA EMAIL}
+	</td>
+	<td>
+		<input type="checkbox" {$EMAIL_notbox}>
+	</td>
+	<td>
+		{$searchtype_EMAIL}
+	</td>
+	<td>
+		{$EMAIL_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$EMAIL_editcontrol1}&nbsp;
+	</td>
+{END EMAIL_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_CLAVE}">
+	{BEGIN CLAVE_fieldblock}		
+	<td>
+		{$label GE_PERSONA CLAVE}
+	</td>
+	<td>
+		<input type="checkbox" {$CLAVE_notbox}>
+	</td>
+	<td>
+		{$searchtype_CLAVE}
+	</td>
+	<td>
+		{$CLAVE_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$CLAVE_editcontrol1}&nbsp;
+	</td>
+{END CLAVE_fieldblock}
+	</tr>
+
+</table></div>
+
+
+{BEGIN searchbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-srchbuttons {$brickclass_srchbuttons}">{BEGIN search_button}
+<a href="#" class="rnr-button main" {$searchbutton_attrs}>Buscar</a>
+{END search_button} 
+{BEGIN reset_button}
+<a href="#" class="rnr-button" {$resetbutton_attrs}>Reiniciar</a>
+{END reset_button}
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Volver a la lista</a>
+{END back_button}</div>{END searchbuttons}
+
+
+</div>
+{END container_fields}
+
+</div>
+
+
+</div>
+{END container_search}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,185 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_all}
+<div class="rnr-c rnr-cv rnr-c-all">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_main} rnr-wrapper rnr-cbw-main">
+
+{BEGIN container_main}
+<div class="rnr-c rnr-cv rnr-c-main">
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_view} rnr-wrapper rnr-cbw-view">
+
+{BEGIN container_view}
+<div class="rnr-c rnr-cv rnr-c-view">
+
+{BEGIN viewheader}
+<div  class="rnr-brickcontents style2 rnr-b-viewheader {$brickclass_viewheader}"><span>	<h1>{$pagetitlelabel GE_FRECUENCIA_EJERCICIO view}</h1>
+</span></div>{END viewheader}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-viewfields {$brickclass_viewfields}"><table class="fieldGrid">
+	{BEGIN FRECUENCIA_EJERCICIO_ID_fieldblock}
+<tr class="{$fielddispclass_FRECUENCIA_EJERCICIO_ID}" data-fieldname="FRECUENCIA_EJERCICIO_ID">
+	<td class="rnr-label">
+		{$label GE_FRECUENCIA_EJERCICIO FRECUENCIA_EJERCICIO_ID}
+	</td>
+	<td class="rnr-control style3">
+		{$FRECUENCIA_EJERCICIO_ID_value}&nbsp;
+	</td>
+</tr>
+{END FRECUENCIA_EJERCICIO_ID_fieldblock}
+	{BEGIN RANGO_fieldblock}
+<tr class="{$fielddispclass_RANGO}" data-fieldname="RANGO">
+	<td class="rnr-label">
+		{$label GE_FRECUENCIA_EJERCICIO RANGO}
+	</td>
+	<td class="rnr-control style3">
+		{$RANGO_value}&nbsp;
+	</td>
+</tr>
+{END RANGO_fieldblock}
+	{BEGIN FEC_CREACION_fieldblock}
+<tr class="{$fielddispclass_FEC_CREACION}" data-fieldname="FEC_CREACION">
+	<td class="rnr-label">
+		{$label GE_FRECUENCIA_EJERCICIO FEC_CREACION}
+	</td>
+	<td class="rnr-control style3">
+		{$FEC_CREACION_value}&nbsp;
+	</td>
+</tr>
+{END FEC_CREACION_fieldblock}
+	{BEGIN USUARIO_CREACION_fieldblock}
+<tr class="{$fielddispclass_USUARIO_CREACION}" data-fieldname="USUARIO_CREACION">
+	<td class="rnr-label">
+		{$label GE_FRECUENCIA_EJERCICIO USUARIO_CREACION}
+	</td>
+	<td class="rnr-control style3">
+		{$USUARIO_CREACION_value}&nbsp;
+	</td>
+</tr>
+{END USUARIO_CREACION_fieldblock}
+	{BEGIN FEC_ULTIMA_MOD_fieldblock}
+<tr class="{$fielddispclass_FEC_ULTIMA_MOD}" data-fieldname="FEC_ULTIMA_MOD">
+	<td class="rnr-label">
+		{$label GE_FRECUENCIA_EJERCICIO FEC_ULTIMA_MOD}
+	</td>
+	<td class="rnr-control style3">
+		{$FEC_ULTIMA_MOD_value}&nbsp;
+	</td>
+</tr>
+{END FEC_ULTIMA_MOD_fieldblock}
+	{BEGIN USUARIO_ULTIMA_MOD_fieldblock}
+<tr class="{$fielddispclass_USUARIO_ULTIMA_MOD}" data-fieldname="USUARIO_ULTIMA_MOD">
+	<td class="rnr-label">
+		{$label GE_FRECUENCIA_EJERCICIO USUARIO_ULTIMA_MOD}
+	</td>
+	<td class="rnr-control style3">
+		{$USUARIO_ULTIMA_MOD_value}&nbsp;
+	</td>
+</tr>
+{END USUARIO_ULTIMA_MOD_fieldblock}
+</table></div>
+
+
+{BEGIN viewbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-viewbuttons {$brickclass_viewbuttons}"><div class="rnr-buttons-right">
+{BEGIN prev_button}
+<a href="#" class="rnr-button {$prevbutton_class}" {$prevbutton_attrs}>&lt;&lt;&lt;</a>
+{END prev_button}
+{BEGIN next_button}
+<a href="#" class="rnr-button {$nextbutton_class}" {$nextbutton_attrs}>&gt;&gt;&gt;</a>
+{END next_button}
+</div>
+<div class="rnr-buttons-left">
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Volver a la lista</a>
+{END back_button}
+{BEGIN close_button}
+<a href="#" class="rnr-button" {$closebutton_attrs}>Cerrar ventana</a>
+{END close_button}
+{BEGIN edit_page_button}
+<a href="#" class="rnr-button" {$edit_page_button_attrs}>Editar</a>
+{END edit_page_button}
+</div>
+</div>{END viewbuttons}
+
+
+</div>
+{END container_fields}
+
+</div>
+
+
+</div>
+{END container_view}
+
+</div>
+
+
+</div>
+{END container_main}
+
+</div>
+
+
+
+</div>
+{END container_all}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

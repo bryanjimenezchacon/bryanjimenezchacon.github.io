@@ -28,6 +28,7 @@
       </div>
 </header>
 <body>
+$c = oci_connect("ge", "ge", "MATCH");
     <div class="content">
       <div class="content_bg">
         <div class="mainbar">

@@ -1,0 +1,12 @@
+<?php
+$dalTableFRECUENCIA_EJERCICIO = array();
+$dalTableFRECUENCIA_EJERCICIO["FRECUENCIA_EJERCICIO_ID"] = array("type"=>14,"varname"=>"FRECUENCIA_EJERCICIO_ID");
+$dalTableFRECUENCIA_EJERCICIO["RANGO"] = array("type"=>200,"varname"=>"RANGO");
+$dalTableFRECUENCIA_EJERCICIO["FEC_CREACION"] = array("type"=>135,"varname"=>"FEC_CREACION");
+$dalTableFRECUENCIA_EJERCICIO["USUARIO_CREACION"] = array("type"=>200,"varname"=>"USUARIO_CREACION");
+$dalTableFRECUENCIA_EJERCICIO["FEC_ULTIMA_MOD"] = array("type"=>135,"varname"=>"FEC_ULTIMA_MOD");
+$dalTableFRECUENCIA_EJERCICIO["USUARIO_ULTIMA_MOD"] = array("type"=>200,"varname"=>"USUARIO_ULTIMA_MOD");
+	$dalTableFRECUENCIA_EJERCICIO["FRECUENCIA_EJERCICIO_ID"]["key"]=true;
+$dal_info["FRECUENCIA_EJERCICIO"]=&$dalTableFRECUENCIA_EJERCICIO;
+
+?>

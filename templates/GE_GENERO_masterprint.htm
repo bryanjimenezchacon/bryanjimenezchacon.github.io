@@ -1,0 +1,52 @@
+<div {$pageattrs}>
+
+{BEGIN container_masterlistheader}
+<div class="rnr-c rnr-ch rnr-c-masterlistheader">
+
+
+<div  class="style1 rnr-bl rnr-b-masterprintheader {$brickclass_masterprintheader}">	<h1>{$pagetitlelabel GE_GENERO masterprint}</h1>
+</div>
+
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_masterlistheader}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table class="rnr-c rnr-cont rnr-c-mastergrid rnr-b-masterprintfields rnr-gridtable" cellpadding="0" >
+	<thead>
+		<tr class="rnr-toprow style1 {$gridHeader_class}" >
+			<th class="{$GENERO_ID_class}">{$label GE_GENERO GENERO_ID}</th>
+			<th class="{$NOMBRE_class}">{$label GE_GENERO NOMBRE}</th>
+			<th class="{$FEC_CREACION_class}">{$label GE_GENERO FEC_CREACION}</th>
+			<th class="{$USUARIO_CREACION_class}">{$label GE_GENERO USUARIO_CREACION}</th>
+			<th class="{$FEC_ULTIMA_MOD_class}">{$label GE_GENERO FEC_ULTIMA_MOD}</th>
+			<th class="{$USUARIO_ULTIMA_MOD_class}">{$label GE_GENERO USUARIO_ULTIMA_MOD}</th>
+			<th class="rnr-edge">&nbsp;</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="rnr-row style1">
+			<td class="{$GENERO_ID_class}">{$GENERO_ID_mastervalue}</td>
+			<td class="{$NOMBRE_class}">{$NOMBRE_mastervalue}</td>
+			<td class="{$FEC_CREACION_class}">{$FEC_CREACION_mastervalue}</td>
+			<td class="{$USUARIO_CREACION_class}">{$USUARIO_CREACION_mastervalue}</td>
+			<td class="{$FEC_ULTIMA_MOD_class}">{$FEC_ULTIMA_MOD_mastervalue}</td>
+			<td class="{$USUARIO_ULTIMA_MOD_class}">{$USUARIO_ULTIMA_MOD_mastervalue}</td>
+			<td class="rnr-edge">&nbsp;</td>
+		</tr>
+	</tbody>
+</table> 
+
+
+
+
+
+{END container_mastergrid}
+
+</div>

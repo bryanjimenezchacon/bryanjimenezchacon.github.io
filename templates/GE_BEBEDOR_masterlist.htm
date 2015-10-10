@@ -1,0 +1,51 @@
+<div {$pageattrs}>
+
+{BEGIN container_masterlistheader}
+<div class="rnr-c rnr-ch rnr-c-masterlistheader">
+
+
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}">	<h1>{$pagetitlelabel GE_BEBEDOR masterlist}</h1>
+</div>
+
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_masterlistheader}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table class="rnr-c rnr-cont rnr-c-mastergrid rnr-b-mastergridfields rnr-gridtable" cellpadding="0" >
+	<thead>
+		<tr class="rnr-toprow style1 {$gridHeader_class}" >
+			<th class="{$BEBEDOR_ID_class}">{$label GE_BEBEDOR BEBEDOR_ID}</th>
+			<th class="{$TIPO_class}">{$label GE_BEBEDOR TIPO}</th>
+			<th class="{$FEC_CREACION_class}">{$label GE_BEBEDOR FEC_CREACION}</th>
+			<th class="{$USUARIO_CREACION_class}">{$label GE_BEBEDOR USUARIO_CREACION}</th>
+			<th class="{$FEC_ULTIMA_MOD_class}">{$label GE_BEBEDOR FEC_ULTIMA_MOD}</th>
+			<th class="{$USUARIO_ULTIMA_MOD_class}">{$label GE_BEBEDOR USUARIO_ULTIMA_MOD}</th>
+			<th class="rnr-edge">&nbsp;</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="rnr-row style1">
+			<td class="{$BEBEDOR_ID_class}">{$BEBEDOR_ID_mastervalue}</td>
+			<td class="{$TIPO_class}">{$TIPO_mastervalue}</td>
+			<td class="{$FEC_CREACION_class}">{$FEC_CREACION_mastervalue}</td>
+			<td class="{$USUARIO_CREACION_class}">{$USUARIO_CREACION_mastervalue}</td>
+			<td class="{$FEC_ULTIMA_MOD_class}">{$FEC_ULTIMA_MOD_mastervalue}</td>
+			<td class="{$USUARIO_ULTIMA_MOD_class}">{$USUARIO_ULTIMA_MOD_mastervalue}</td>
+			<td class="rnr-edge">&nbsp;</td>
+		</tr>
+	</tbody>
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

@@ -6,6 +6,7 @@
 	<title>ola</title>
 </head>
 <body>
+$c = oci_connect("ge", "ge", "MATCH");
 <form method="post"  action="ProcesarCrearEvento.php">
 
 <select name="taskOption">

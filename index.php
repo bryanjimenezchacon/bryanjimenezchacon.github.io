@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="PantallaInicioCss.css"/>
 	</head>
 	<body>
+	$c = oci_connect("ge", "ge", "MATCH");
 	<header class="head1">
     	<a href="https://www.facebook.com/matchmecr?fref=ts">
     	<img src="images/iconface.png" width="3%" height="3%" alt="" align = "left" hspace="10" vspace="5"/>

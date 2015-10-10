@@ -1,0 +1,12 @@
+<?php
+$dalTableCATEGORIA_OCUPACION = array();
+$dalTableCATEGORIA_OCUPACION["CATEGORIA_OCUPACION_ID"] = array("type"=>14,"varname"=>"CATEGORIA_OCUPACION_ID");
+$dalTableCATEGORIA_OCUPACION["NOMBRE"] = array("type"=>200,"varname"=>"NOMBRE");
+$dalTableCATEGORIA_OCUPACION["FEC_CREACION"] = array("type"=>135,"varname"=>"FEC_CREACION");
+$dalTableCATEGORIA_OCUPACION["USUARIO_CREACION"] = array("type"=>200,"varname"=>"USUARIO_CREACION");
+$dalTableCATEGORIA_OCUPACION["FEC_ULTIMA_MOD"] = array("type"=>135,"varname"=>"FEC_ULTIMA_MOD");
+$dalTableCATEGORIA_OCUPACION["USUARIO_ULTIMA_MOD"] = array("type"=>200,"varname"=>"USUARIO_ULTIMA_MOD");
+	$dalTableCATEGORIA_OCUPACION["CATEGORIA_OCUPACION_ID"]["key"]=true;
+$dal_info["CATEGORIA_OCUPACION"]=&$dalTableCATEGORIA_OCUPACION;
+
+?>

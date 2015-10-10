@@ -1,0 +1,52 @@
+<div {$pageattrs}>
+
+{BEGIN container_masterlistheader}
+<div class="rnr-c rnr-ch rnr-c-masterlistheader">
+
+
+<div  class="style1 rnr-bl rnr-b-masterprintheader {$brickclass_masterprintheader}">	<h1>{$pagetitlelabel GE_TIPO_RELACION masterprint}</h1>
+</div>
+
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_masterlistheader}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table class="rnr-c rnr-cont rnr-c-mastergrid rnr-b-masterprintfields rnr-gridtable" cellpadding="0" >
+	<thead>
+		<tr class="rnr-toprow style1 {$gridHeader_class}" >
+			<th class="{$TIPO_RELACION_ID_class}">{$label GE_TIPO_RELACION TIPO_RELACION_ID}</th>
+			<th class="{$NOMBRE_class}">{$label GE_TIPO_RELACION NOMBRE}</th>
+			<th class="{$FECHA_CREACION_class}">{$label GE_TIPO_RELACION FECHA_CREACION}</th>
+			<th class="{$FECHA_MODIFICACION_class}">{$label GE_TIPO_RELACION FECHA_MODIFICACION}</th>
+			<th class="{$USUARIO_CREACION_class}">{$label GE_TIPO_RELACION USUARIO_CREACION}</th>
+			<th class="{$USUARIO_MODIFICACION_class}">{$label GE_TIPO_RELACION USUARIO_MODIFICACION}</th>
+			<th class="rnr-edge">&nbsp;</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="rnr-row style1">
+			<td class="{$TIPO_RELACION_ID_class}">{$TIPO_RELACION_ID_mastervalue}</td>
+			<td class="{$NOMBRE_class}">{$NOMBRE_mastervalue}</td>
+			<td class="{$FECHA_CREACION_class}">{$FECHA_CREACION_mastervalue}</td>
+			<td class="{$FECHA_MODIFICACION_class}">{$FECHA_MODIFICACION_mastervalue}</td>
+			<td class="{$USUARIO_CREACION_class}">{$USUARIO_CREACION_mastervalue}</td>
+			<td class="{$USUARIO_MODIFICACION_class}">{$USUARIO_MODIFICACION_mastervalue}</td>
+			<td class="rnr-edge">&nbsp;</td>
+		</tr>
+	</tbody>
+</table> 
+
+
+
+
+
+{END container_mastergrid}
+
+</div>

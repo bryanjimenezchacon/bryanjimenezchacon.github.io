@@ -1,0 +1,325 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_all}
+<div class="rnr-c rnr-cv rnr-c-all">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_main} rnr-wrapper rnr-cbw-main">
+
+{BEGIN container_main}
+<div class="rnr-c rnr-cv rnr-c-main">
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_view} rnr-wrapper rnr-cbw-view">
+
+{BEGIN container_view}
+<div class="rnr-c rnr-cv rnr-c-view">
+
+{BEGIN viewheader}
+<div  class="rnr-brickcontents style2 rnr-b-viewheader {$brickclass_viewheader}"><span>	<h1>{$pagetitlelabel GE_PERSONA_DISPONIBLE view}</h1>
+</span></div>{END viewheader}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-viewfields {$brickclass_viewfields}"><table class="fieldGrid">
+	{BEGIN USERNAME_fieldblock}
+<tr class="{$fielddispclass_USERNAME}" data-fieldname="USERNAME">
+	<td class="rnr-label">
+		{$label GE_PERSONA_DISPONIBLE USERNAME}
+	</td>
+	<td class="rnr-control style3">
+		{$USERNAME_value}&nbsp;
+	</td>
+</tr>
+{END USERNAME_fieldblock}
+	{BEGIN ES_REAL_fieldblock}
+<tr class="{$fielddispclass_ES_REAL}" data-fieldname="ES_REAL">
+	<td class="rnr-label">
+		{$label GE_PERSONA_DISPONIBLE ES_REAL}
+	</td>
+	<td class="rnr-control style3">
+		{$ES_REAL_value}&nbsp;
+	</td>
+</tr>
+{END ES_REAL_fieldblock}
+	{BEGIN COLOR_OJOS_ID_fieldblock}
+<tr class="{$fielddispclass_COLOR_OJOS_ID}" data-fieldname="COLOR_OJOS_ID">
+	<td class="rnr-label">
+		{$label GE_PERSONA_DISPONIBLE COLOR_OJOS_ID}
+	</td>
+	<td class="rnr-control style3">
+		{$COLOR_OJOS_ID_value}&nbsp;
+	</td>
+</tr>
+{END COLOR_OJOS_ID_fieldblock}
+	{BEGIN COLOR_PIEL_ID_fieldblock}
+<tr class="{$fielddispclass_COLOR_PIEL_ID}" data-fieldname="COLOR_PIEL_ID">
+	<td class="rnr-label">
+		{$label GE_PERSONA_DISPONIBLE COLOR_PIEL_ID}
+	</td>
+	<td class="rnr-control style3">
+		{$COLOR_PIEL_ID_value}&nbsp;
+	</td>
+</tr>
+{END COLOR_PIEL_ID_fieldblock}
+	{BEGIN CONTEXTURA_ID_fieldblock}
+<tr class="{$fielddispclass_CONTEXTURA_ID}" data-fieldname="CONTEXTURA_ID">
+	<td class="rnr-label">
+		{$label GE_PERSONA_DISPONIBLE CONTEXTURA_ID}
+	</td>
+	<td class="rnr-control style3">
+		{$CONTEXTURA_ID_value}&nbsp;
+	</td>
+</tr>
+{END CONTEXTURA_ID_fieldblock}
+	{BEGIN NIVEL_EDUCACION_ID_fieldblock}
+<tr class="{$fielddispclass_NIVEL_EDUCACION_ID}" data-fieldname="NIVEL_EDUCACION_ID">
+	<td class="rnr-label">
+		{$label GE_PERSONA_DISPONIBLE NIVEL_EDUCACION_ID}
+	</td>
+	<td class="rnr-control style3">
+		{$NIVEL_EDUCACION_ID_value}&nbsp;
+	</td>
+</tr>
+{END NIVEL_EDUCACION_ID_fieldblock}
+	{BEGIN ESTADO_CIVIL_ID_fieldblock}
+<tr class="{$fielddispclass_ESTADO_CIVIL_ID}" data-fieldname="ESTADO_CIVIL_ID">
+	<td class="rnr-label">
+		{$label GE_PERSONA_DISPONIBLE ESTADO_CIVIL_ID}
+	</td>
+	<td class="rnr-control style3">
+		{$ESTADO_CIVIL_ID_value}&nbsp;
+	</td>
+</tr>
+{END ESTADO_CIVIL_ID_fieldblock}
+	{BEGIN FUMADOR_ID_fieldblock}
+<tr class="{$fielddispclass_FUMADOR_ID}" data-fieldname="FUMADOR_ID">
+	<td class="rnr-label">
+		{$label GE_PERSONA_DISPONIBLE FUMADOR_ID}
+	</td>
+	<td class="rnr-control style3">
+		{$FUMADOR_ID_value}&nbsp;
+	</td>
+</tr>
+{END FUMADOR_ID_fieldblock}
+	{BEGIN BEBEDOR_ID_fieldblock}
+<tr class="{$fielddispclass_BEBEDOR_ID}" data-fieldname="BEBEDOR_ID">
+	<td class="rnr-label">
+		{$label GE_PERSONA_DISPONIBLE BEBEDOR_ID}
+	</td>
+	<td class="rnr-control style3">
+		{$BEBEDOR_ID_value}&nbsp;
+	</td>
+</tr>
+{END BEBEDOR_ID_fieldblock}
+	{BEGIN FRECUENCIA_EJERCICIO_ID_fieldblock}
+<tr class="{$fielddispclass_FRECUENCIA_EJERCICIO_ID}" data-fieldname="FRECUENCIA_EJERCICIO_ID">
+	<td class="rnr-label">
+		{$label GE_PERSONA_DISPONIBLE FRECUENCIA_EJERCICIO_ID}
+	</td>
+	<td class="rnr-control style3">
+		{$FRECUENCIA_EJERCICIO_ID_value}&nbsp;
+	</td>
+</tr>
+{END FRECUENCIA_EJERCICIO_ID_fieldblock}
+	{BEGIN SALARIO_ID_fieldblock}
+<tr class="{$fielddispclass_SALARIO_ID}" data-fieldname="SALARIO_ID">
+	<td class="rnr-label">
+		{$label GE_PERSONA_DISPONIBLE SALARIO_ID}
+	</td>
+	<td class="rnr-control style3">
+		{$SALARIO_ID_value}&nbsp;
+	</td>
+</tr>
+{END SALARIO_ID_fieldblock}
+	{BEGIN ALTURA_fieldblock}
+<tr class="{$fielddispclass_ALTURA}" data-fieldname="ALTURA">
+	<td class="rnr-label">
+		{$label GE_PERSONA_DISPONIBLE ALTURA}
+	</td>
+	<td class="rnr-control style3">
+		{$ALTURA_value}&nbsp;
+	</td>
+</tr>
+{END ALTURA_fieldblock}
+	{BEGIN PESO_fieldblock}
+<tr class="{$fielddispclass_PESO}" data-fieldname="PESO">
+	<td class="rnr-label">
+		{$label GE_PERSONA_DISPONIBLE PESO}
+	</td>
+	<td class="rnr-control style3">
+		{$PESO_value}&nbsp;
+	</td>
+</tr>
+{END PESO_fieldblock}
+	{BEGIN NUM_HIJOS_fieldblock}
+<tr class="{$fielddispclass_NUM_HIJOS}" data-fieldname="NUM_HIJOS">
+	<td class="rnr-label">
+		{$label GE_PERSONA_DISPONIBLE NUM_HIJOS}
+	</td>
+	<td class="rnr-control style3">
+		{$NUM_HIJOS_value}&nbsp;
+	</td>
+</tr>
+{END NUM_HIJOS_fieldblock}
+	{BEGIN QUIERE_HIJOS_fieldblock}
+<tr class="{$fielddispclass_QUIERE_HIJOS}" data-fieldname="QUIERE_HIJOS">
+	<td class="rnr-label">
+		{$label GE_PERSONA_DISPONIBLE QUIERE_HIJOS}
+	</td>
+	<td class="rnr-control style3">
+		{$QUIERE_HIJOS_value}&nbsp;
+	</td>
+</tr>
+{END QUIERE_HIJOS_fieldblock}
+	{BEGIN FEC_CREACION_fieldblock}
+<tr class="{$fielddispclass_FEC_CREACION}" data-fieldname="FEC_CREACION">
+	<td class="rnr-label">
+		{$label GE_PERSONA_DISPONIBLE FEC_CREACION}
+	</td>
+	<td class="rnr-control style3">
+		{$FEC_CREACION_value}&nbsp;
+	</td>
+</tr>
+{END FEC_CREACION_fieldblock}
+	{BEGIN USUARIO_CREACION_fieldblock}
+<tr class="{$fielddispclass_USUARIO_CREACION}" data-fieldname="USUARIO_CREACION">
+	<td class="rnr-label">
+		{$label GE_PERSONA_DISPONIBLE USUARIO_CREACION}
+	</td>
+	<td class="rnr-control style3">
+		{$USUARIO_CREACION_value}&nbsp;
+	</td>
+</tr>
+{END USUARIO_CREACION_fieldblock}
+	{BEGIN FEC_ULTIMA_MOD_fieldblock}
+<tr class="{$fielddispclass_FEC_ULTIMA_MOD}" data-fieldname="FEC_ULTIMA_MOD">
+	<td class="rnr-label">
+		{$label GE_PERSONA_DISPONIBLE FEC_ULTIMA_MOD}
+	</td>
+	<td class="rnr-control style3">
+		{$FEC_ULTIMA_MOD_value}&nbsp;
+	</td>
+</tr>
+{END FEC_ULTIMA_MOD_fieldblock}
+	{BEGIN USUARIO_ULTIMA_MOD_fieldblock}
+<tr class="{$fielddispclass_USUARIO_ULTIMA_MOD}" data-fieldname="USUARIO_ULTIMA_MOD">
+	<td class="rnr-label">
+		{$label GE_PERSONA_DISPONIBLE USUARIO_ULTIMA_MOD}
+	</td>
+	<td class="rnr-control style3">
+		{$USUARIO_ULTIMA_MOD_value}&nbsp;
+	</td>
+</tr>
+{END USUARIO_ULTIMA_MOD_fieldblock}
+	{BEGIN TIPO_RELACION_ID_fieldblock}
+<tr class="{$fielddispclass_TIPO_RELACION_ID}" data-fieldname="TIPO_RELACION_ID">
+	<td class="rnr-label">
+		{$label GE_PERSONA_DISPONIBLE TIPO_RELACION_ID}
+	</td>
+	<td class="rnr-control style3">
+		{$TIPO_RELACION_ID_value}&nbsp;
+	</td>
+</tr>
+{END TIPO_RELACION_ID_fieldblock}
+</table></div>
+
+
+{BEGIN viewbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-viewbuttons {$brickclass_viewbuttons}"><div class="rnr-buttons-right">
+{BEGIN prev_button}
+<a href="#" class="rnr-button {$prevbutton_class}" {$prevbutton_attrs}>&lt;&lt;&lt;</a>
+{END prev_button}
+{BEGIN next_button}
+<a href="#" class="rnr-button {$nextbutton_class}" {$nextbutton_attrs}>&gt;&gt;&gt;</a>
+{END next_button}
+</div>
+<div class="rnr-buttons-left">
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Volver a la lista</a>
+{END back_button}
+{BEGIN close_button}
+<a href="#" class="rnr-button" {$closebutton_attrs}>Cerrar ventana</a>
+{END close_button}
+{BEGIN edit_page_button}
+<a href="#" class="rnr-button" {$edit_page_button_attrs}>Editar</a>
+{END edit_page_button}
+</div>
+</div>{END viewbuttons}
+
+
+</div>
+{END container_fields}
+
+</div>
+
+
+</div>
+{END container_view}
+
+</div>
+
+
+</div>
+{END container_main}
+
+</div>
+
+
+
+</div>
+{END container_all}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

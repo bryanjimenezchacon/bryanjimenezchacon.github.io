@@ -13,7 +13,7 @@
 <script type="text/javascript" src="js/cuf_run.js"></script>
 </head>
 <body>
-
+$c = oci_connect("ge", "ge", "MATCH");
 <header class="head1">
 	<img src="images/logotipo.png" align="left" width=25%><img src="images/LogoOficialTrans.png" alt="" width="120" height="101" align="right">
       <div class="menu_nav">

@@ -1,7 +1,7 @@
 <?php
  // CONEXION Y VARIABLES
 date_default_timezone_set('America/Costa_Rica');
-$c = oci_connect("ge", "ge", "localhost/BDMATCHME");
+$c = oci_connect("ge", "ge", "MATCH");
 	$titulo = $_POST['titulo_evento'];
 	$lugar = $_POST['lugar_evento'];
 	$ciudad = intval ($_POST['combo_CIUDAD']);

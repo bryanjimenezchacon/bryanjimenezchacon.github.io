@@ -13,6 +13,7 @@
 <script type="text/javascript" src="js/cuf_run.js"></script>
 </head>
 <body>
+$c = oci_connect("ge", "ge", "MATCH");
 <div class="main">
   <div class="main_resize">
     <div class="header">
@@ -22,11 +23,11 @@
       <div class="clr"></div>
       <div class="menu_nav">
         <ul>
-          <li class="active"><a href="PantallaAdmin.PHP">Inicio</a></li>
-          <li><a href="AgregarAdmin.PHP">Agregar Administrador</a></li>
-          <li><a href="Perfil.PHP">Crear Evento</a></li>
-            <li><a href="ModificarFormularios.PHP">Modificar Formulario</a></li>
-        <li><a href="ConsultasAdmin.PHP">Consultas</a></li>
+          <li><a href="PantallaAdmin.PHP">Inicio</a></li>
+          <li><a href="GE.PERSONA.PHP">Agregar Administrador</a></li>
+          <li><a href="GE.EVENTO.PHP">Crear Evento</a></li>
+        <li><a href="GE.BEBEDOR.PHP">Modificar Formulario</a></li>
+          <li class="active"><a href="GE.BEBEDOR.PHP">Consultar Usuarios</a></li>
           <li><a href="index.PHP">Salir</a></li>
         </ul>
         <div class="clr"></div>

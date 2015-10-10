@@ -1,0 +1,217 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_search}
+<div class="rnr-c rnr-cv rnr-c-search">
+
+{BEGIN searchheader}
+<div  class="rnr-brickcontents style2 rnr-b-srchheader {$brickclass_srchheader}"><span>	<h1>{$pagetitlelabel GE_TIPO_RELACION search}</h1>
+</span></div>{END searchheader}
+
+
+{BEGIN conditions_block}
+<div  class="rnr-brickcontents style1 rnr-b-srchconditions {$brickclass_srchconditions}">	<center>
+	<span class=fieldname>Criterio:&nbsp;</span>	
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$all_checkbox}><label for="all_checkbox"> Todas las condiciones</label>
+	&nbsp;&nbsp;&nbsp;
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$any_checkbox}><label for="any_checkbox"> Ninguna condición</label>
+	</center></div>{END conditions_block}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-srchfields {$brickclass_srchfields}"><table class="fieldGrid">
+	<tr>
+		<td>&nbsp;</td>
+		<td>NO</td>
+		<td colspan=3>&nbsp; </td>
+	</tr>
+	<tr class="{$fielddispclass_TIPO_RELACION_ID}">
+	{BEGIN TIPO_RELACION_ID_fieldblock}		
+	<td>
+		{$label GE_TIPO_RELACION TIPO_RELACION_ID}
+	</td>
+	<td>
+		<input type="checkbox" {$TIPO_RELACION_ID_notbox}>
+	</td>
+	<td>
+		{$searchtype_TIPO_RELACION_ID}
+	</td>
+	<td>
+		{$TIPO_RELACION_ID_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$TIPO_RELACION_ID_editcontrol1}&nbsp;
+	</td>
+{END TIPO_RELACION_ID_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_NOMBRE}">
+	{BEGIN NOMBRE_fieldblock}		
+	<td>
+		{$label GE_TIPO_RELACION NOMBRE}
+	</td>
+	<td>
+		<input type="checkbox" {$NOMBRE_notbox}>
+	</td>
+	<td>
+		{$searchtype_NOMBRE}
+	</td>
+	<td>
+		{$NOMBRE_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$NOMBRE_editcontrol1}&nbsp;
+	</td>
+{END NOMBRE_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_FECHA_CREACION}">
+	{BEGIN FECHA_CREACION_fieldblock}		
+	<td>
+		{$label GE_TIPO_RELACION FECHA_CREACION}
+	</td>
+	<td>
+		<input type="checkbox" {$FECHA_CREACION_notbox}>
+	</td>
+	<td>
+		{$searchtype_FECHA_CREACION}
+	</td>
+	<td>
+		{$FECHA_CREACION_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$FECHA_CREACION_editcontrol1}&nbsp;
+	</td>
+{END FECHA_CREACION_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_FECHA_MODIFICACION}">
+	{BEGIN FECHA_MODIFICACION_fieldblock}		
+	<td>
+		{$label GE_TIPO_RELACION FECHA_MODIFICACION}
+	</td>
+	<td>
+		<input type="checkbox" {$FECHA_MODIFICACION_notbox}>
+	</td>
+	<td>
+		{$searchtype_FECHA_MODIFICACION}
+	</td>
+	<td>
+		{$FECHA_MODIFICACION_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$FECHA_MODIFICACION_editcontrol1}&nbsp;
+	</td>
+{END FECHA_MODIFICACION_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_USUARIO_CREACION}">
+	{BEGIN USUARIO_CREACION_fieldblock}		
+	<td>
+		{$label GE_TIPO_RELACION USUARIO_CREACION}
+	</td>
+	<td>
+		<input type="checkbox" {$USUARIO_CREACION_notbox}>
+	</td>
+	<td>
+		{$searchtype_USUARIO_CREACION}
+	</td>
+	<td>
+		{$USUARIO_CREACION_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$USUARIO_CREACION_editcontrol1}&nbsp;
+	</td>
+{END USUARIO_CREACION_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_USUARIO_MODIFICACION}">
+	{BEGIN USUARIO_MODIFICACION_fieldblock}		
+	<td>
+		{$label GE_TIPO_RELACION USUARIO_MODIFICACION}
+	</td>
+	<td>
+		<input type="checkbox" {$USUARIO_MODIFICACION_notbox}>
+	</td>
+	<td>
+		{$searchtype_USUARIO_MODIFICACION}
+	</td>
+	<td>
+		{$USUARIO_MODIFICACION_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$USUARIO_MODIFICACION_editcontrol1}&nbsp;
+	</td>
+{END USUARIO_MODIFICACION_fieldblock}
+	</tr>
+
+</table></div>
+
+
+{BEGIN searchbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-srchbuttons {$brickclass_srchbuttons}">{BEGIN search_button}
+<a href="#" class="rnr-button main" {$searchbutton_attrs}>Buscar</a>
+{END search_button} 
+{BEGIN reset_button}
+<a href="#" class="rnr-button" {$resetbutton_attrs}>Reiniciar</a>
+{END reset_button}
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Volver a la lista</a>
+{END back_button}</div>{END searchbuttons}
+
+
+</div>
+{END container_fields}
+
+</div>
+
+
+</div>
+{END container_search}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

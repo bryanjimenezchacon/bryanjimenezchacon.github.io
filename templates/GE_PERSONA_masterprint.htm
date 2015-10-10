@@ -1,0 +1,70 @@
+<div {$pageattrs}>
+
+{BEGIN container_masterlistheader}
+<div class="rnr-c rnr-ch rnr-c-masterlistheader">
+
+
+<div  class="style1 rnr-bl rnr-b-masterprintheader {$brickclass_masterprintheader}">	<h1>{$pagetitlelabel GE_PERSONA masterprint}</h1>
+</div>
+
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_masterlistheader}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table class="rnr-c rnr-cont rnr-c-mastergrid rnr-b-masterprintfields rnr-gridtable" cellpadding="0" >
+	<thead>
+		<tr class="rnr-toprow style1 {$gridHeader_class}" >
+			<th class="{$USERNAME_class}">{$label GE_PERSONA USERNAME}</th>
+			<th class="{$ES_ADMIN_class}">{$label GE_PERSONA ES_ADMIN}</th>
+			<th class="{$NACIMIENTO_class}">{$label GE_PERSONA NACIMIENTO}</th>
+			<th class="{$PRIMER_APELLIDO_class}">{$label GE_PERSONA PRIMER_APELLIDO}</th>
+			<th class="{$SEGUNDO_APELLIDO_class}">{$label GE_PERSONA SEGUNDO_APELLIDO}</th>
+			<th class="{$NOMBRE_class}">{$label GE_PERSONA NOMBRE}</th>
+			<th class="{$GENERO_ID_class}">{$label GE_PERSONA GENERO_ID}</th>
+			<th class="{$CIUDAD_ID_class}">{$label GE_PERSONA CIUDAD_ID}</th>
+			<th class="{$SLOGAN_class}">{$label GE_PERSONA SLOGAN}</th>
+			<th class="{$FEC_CREACION_class}">{$label GE_PERSONA FEC_CREACION}</th>
+			<th class="{$USUARIO_CREACION_class}">{$label GE_PERSONA USUARIO_CREACION}</th>
+			<th class="{$FEC_ULTIMA_MOD_class}">{$label GE_PERSONA FEC_ULTIMA_MOD}</th>
+			<th class="{$USUARIO_ULTIMA_MOD_class}">{$label GE_PERSONA USUARIO_ULTIMA_MOD}</th>
+			<th class="{$EMAIL_class}">{$label GE_PERSONA EMAIL}</th>
+			<th class="{$CLAVE_class}">{$label GE_PERSONA CLAVE}</th>
+			<th class="rnr-edge">&nbsp;</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="rnr-row style1">
+			<td class="{$USERNAME_class}">{$USERNAME_mastervalue}</td>
+			<td class="{$ES_ADMIN_class}">{$ES_ADMIN_mastervalue}</td>
+			<td class="{$NACIMIENTO_class}">{$NACIMIENTO_mastervalue}</td>
+			<td class="{$PRIMER_APELLIDO_class}">{$PRIMER_APELLIDO_mastervalue}</td>
+			<td class="{$SEGUNDO_APELLIDO_class}">{$SEGUNDO_APELLIDO_mastervalue}</td>
+			<td class="{$NOMBRE_class}">{$NOMBRE_mastervalue}</td>
+			<td class="{$GENERO_ID_class}">{$GENERO_ID_mastervalue}</td>
+			<td class="{$CIUDAD_ID_class}">{$CIUDAD_ID_mastervalue}</td>
+			<td class="{$SLOGAN_class}">{$SLOGAN_mastervalue}</td>
+			<td class="{$FEC_CREACION_class}">{$FEC_CREACION_mastervalue}</td>
+			<td class="{$USUARIO_CREACION_class}">{$USUARIO_CREACION_mastervalue}</td>
+			<td class="{$FEC_ULTIMA_MOD_class}">{$FEC_ULTIMA_MOD_mastervalue}</td>
+			<td class="{$USUARIO_ULTIMA_MOD_class}">{$USUARIO_ULTIMA_MOD_mastervalue}</td>
+			<td class="{$EMAIL_class}">{$EMAIL_mastervalue}</td>
+			<td class="{$CLAVE_class}">{$CLAVE_mastervalue}</td>
+			<td class="rnr-edge">&nbsp;</td>
+		</tr>
+	</tbody>
+</table> 
+
+
+
+
+
+{END container_mastergrid}
+
+</div>

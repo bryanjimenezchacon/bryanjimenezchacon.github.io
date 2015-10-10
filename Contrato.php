@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="PantallaInicioCss.css"/>
 	</head>
 	<body>
+	$c = oci_connect("ge", "ge", "MATCH");
 	<header class="head1">
 		<img src="images/logotipo.png" align="left" width=15%><img src="images/LogoOficialTrans.png" alt="" width="102" height="101" align="right">
 		<form method="post" class="signup" action="ingreso.js">

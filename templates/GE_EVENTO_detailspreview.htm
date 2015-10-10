@@ -1,0 +1,73 @@
+<div {$pageattrs}>
+
+{BEGIN container_dcount}
+<div class="rnr-c rnr-cv rnr-c-dcount">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-detailspreviewheader {$brickclass_detailspreviewheader}">	<h1>{$pagetitlelabel GE_EVENTO detailspreview}</h1>
+</div>
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-detailspreviewdetailsfount {$brickclass_detailspreviewdetailsfount}">Detalles encontrados: <strong>{$row_count}.</strong>
+</div>
+
+
+{BEGIN display_first}
+<div  class="rnr-brickcontents style1 rnr-b-detailspreviewdispfirst {$brickclass_detailspreviewdispfirst}">Mostrando primero: <strong>{$display_count}</strong>.
+</div>{END display_first}
+
+
+</div>
+{END container_dcount}
+
+
+
+{BEGIN container_detailspreviewgrid}
+
+
+{BEGIN details_data}
+<table class="rnr-c rnr-cont rnr-c--detailspreviewgrid rnr-b-detailspreviewgrid rnr-gridtable">
+{BEGIN details_row_header}
+	<thead>
+		<tr class="rnr-toprow style1 {$gridHeader_class}" >
+			<th class="{$EVENTO_ID_class}">{$label GE_EVENTO EVENTO_ID}</th>
+			<th class="{$NOMBRE_class}">{$label GE_EVENTO NOMBRE}</th>
+			<th class="{$FECHA_HORA_class}">{$label GE_EVENTO FECHA_HORA}</th>
+			<th class="{$LUGAR_class}">{$label GE_EVENTO LUGAR}</th>
+			<th class="{$DESCRIPCION_class}">{$label GE_EVENTO DESCRIPCION}</th>
+			<th class="{$FEC_CREACION_class}">{$label GE_EVENTO FEC_CREACION}</th>
+			<th class="{$USUARIO_CREACION_class}">{$label GE_EVENTO USUARIO_CREACION}</th>
+			<th class="{$FEC_ULTIMA_MOD_class}">{$label GE_EVENTO FEC_ULTIMA_MOD}</th>
+			<th class="{$USUARIO_ULTIMA_MOD_class}">{$label GE_EVENTO USUARIO_ULTIMA_MOD}</th>
+			<th class="{$CIUDAD_class}">{$label GE_EVENTO CIUDAD}</th>
+			<th class="rnr-edge">&nbsp;</th>
+		</tr>
+	</thead>
+{END details_row_header}
+	<tbody>
+{BEGIN details_row}
+		<tr class="rnr-row style1">
+			<td class="{$EVENTO_ID_class}">{$EVENTO_ID_value}</td>
+			<td class="{$NOMBRE_class}">{$NOMBRE_value}</td>
+			<td class="{$FECHA_HORA_class}">{$FECHA_HORA_value}</td>
+			<td class="{$LUGAR_class}">{$LUGAR_value}</td>
+			<td class="{$DESCRIPCION_class}">{$DESCRIPCION_value}</td>
+			<td class="{$FEC_CREACION_class}">{$FEC_CREACION_value}</td>
+			<td class="{$USUARIO_CREACION_class}">{$USUARIO_CREACION_value}</td>
+			<td class="{$FEC_ULTIMA_MOD_class}">{$FEC_ULTIMA_MOD_value}</td>
+			<td class="{$USUARIO_ULTIMA_MOD_class}">{$USUARIO_ULTIMA_MOD_value}</td>
+			<td class="{$CIUDAD_class}">{$CIUDAD_value}</td>
+			<td class="rnr-edge">&nbsp;</td>
+		</tr>
+{END details_row}	
+	</tbody>
+</table>
+
+{END details_data}
+
+
+
+{END container_detailspreviewgrid}
+
+</div>

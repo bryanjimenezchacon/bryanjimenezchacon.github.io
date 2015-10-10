@@ -15,7 +15,7 @@
 <body>
 
 <?php // CONEXION Y VARIABLES
-$c = oci_connect("ge", "ge", "localhost/BDMATCHME");
+$c = oci_connect("ge", "ge", "MATCH");
 
 $array_GENERO = oci_parse($c, 'SELECT * FROM GENERO');
 oci_execute($array_GENERO);
@@ -34,10 +34,11 @@ oci_execute($array_CIUDAD);
       <div class="clr"></div>
       <div class="menu_nav">
         <ul>
-          <li ><a href="PantallaAdmin.PHP">Inicio</a></li>
-          <li class="active"><a href="AgregarAdmin.PHP">Agregar Administrador</a></li>
-          <li><a href="CrearEvento.PHP">Crear Evento</a></li>
-        <li><a href="ModificarFormularios.PHP">Modificar Formulario</a></li>
+          <li><a href="PantallaAdmin.PHP">Inicio</a></li>
+          <li><a href="GE.PERSONA.PHP">Agregar Administrador</a></li>
+          <li><a href="GE.EVENTO.PHP">Crear Evento</a></li>
+        <li><a href="GE.BEBEDOR.PHP">Modificar Formulario</a></li>
+          <li class="active"><a href="GE.BEBEDOR.PHP">Consultar Usuarios</a></li>
           <li><a href="index.PHP">Salir</a></li>
         </ul>
         <div class="clr"></div>
